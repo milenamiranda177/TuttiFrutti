@@ -1,0 +1,31 @@
+body {
+    background-image: url(../imagenes/fondo.jpg);
+    background-attachment: fixed;
+    background-position-x: 100%;
+    background-position-y: 10%;
+    background-size: cover;
+    width: 100px min-content;
+    height: 90% !important;
+    border-radius: 30px 30px 30px 100px;
+}
+.pina{
+    padding: 1% !important;
+    margin:10% !important;
+    margin-left: 30% !important;
+    width: 40% !important;
+    background:rgba(228, 199, 5, 0.8) !important;
+}
+.boton{
+    background: #88A649;
+    font-size: 16px;
+}
+.divider{
+    width: 100% !important;
+    height: 10px !important;
+}
+.rounded{
+    border-radius: 0.1px !important;
+}
+
+
+

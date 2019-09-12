@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min-custom.css"  media="screen,projection"/>
+    
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TuttiFrutti</title>
+</head>
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <div class="overlap-header"></div>
+    <div class="container content-custom-width">
+                <div class="row ">
+                                <div class="col s2" id="logo">
+                                                <div class="card-content">
+                                                  <img src="imagenes/home/tuttifrutti.png" width=200px height=220px alt="" class=" responsive-img">
+                                                 
+                                                </div>
+                                        </div>
+                                        <div class="col s5" id="dividerheader"></div>
+                                        <div class="col s3 input-field" id="search">
+                                                 <i class="material-icons tiny prefix orange-text darken-1 padding-10">search</i>
+                                                <input type="text" class="orange-text darken-1" placeholder="Buscar...">
+                                        </div>
+                                        <div class="col s1" id="notification">
+                                            <a href="#" onclick="alert('Tienes 4 mensajes sin leer, ve a chat')"><img src="imagenes/home/notification.jpg"  width=35px height=35px alt="" class="notification responsive-img">
+                                            </a></div>
+                                        <div class="col s1 center-align" id="profile">
+                                             <a href="perfil.html" class="black-text"><img src="imagenes/perfil/perfil.jpg" width=80px height=80px alt="" class="circle responsive-img">
+                                                Bennet</a>
+                                        </div>
+                    </div>
+                    <div class="row">
+                                <div class="border-radius-5-left padding-10 col s3 pink lighten-1 center-align">
+                                                <div class="card-content pink lighten-1 white-text ">
+                                                      <a href="home.html" class="white-text"><i class="iconos_absolute material-icons">shopping_basket</i> <span>FRUTERO</span></a>   
+                                                </div>
+                                            </div>
+                                            <div  class="padding-10 col s3 light-green center-align">
+                                                <div class="card-content light-green  white-text">
+                                                        <a href="perfil.html" class="white-text"><i class="iconos_absolute material-icons">wb_sunny</i> <span>PERFIL</span></a>         
+                                                </div>
+                                            </div>
+                                            <div  class="padding-10 col s3 light-green lighten-1 center-align">
+                                                <div class="card-content light-green lighten-1 white-text">
+                                                       
+                                                        <a href="chat.html" class="white-text"> <i class="iconos_absolute material-icons">chat</i> <span>FRUTICHAT</span> </a>
+                                                </div>
+                                            </div>
+                                            <div  class="border-radius-5-right padding-10 col s3 light-green center-align">
+                                                <div class="card-content light-green  white-text">
+                                                        <a href="index.html" class="white-text"><i class="iconos_absolute material-icons">exit_to_app </i><span>SALIR</span> </a>
+                                                </div>
+                                            </div>
+                    </div>
+                    <div class="row" >
+                            <div class="col s3 white col-content"  id="historys">
+                                    <h5>Stories</h5>
+                                    <div class="row center-align">
+                                            <div class="card card-custom">
+                                                    <div class="overlap"></div>
+                                                    <div class="card-image">
+                                                            <img src="imagenes/home/history1.gif" class="">
+                                                            <a class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i class="material-icons">add</i></a>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <span class="black-text truncate">Adelantando cuaderno</span>
+                                                    </div>   
+                                                           
+                                            </div>
+                                    </div> 
+                                    <!-- Carrusel de Stories-->
+                                    <div class="row">
+                                                <div id="storiescont" class="card card-custom">
+                                                        <div id="bubbles" class="card">
+                                                                <ul class="collection">
+                                                                        <li class="collection-item avatar">
+                                                                                <img src="imagenes/storiesimg/smile.jpg"
+                                                                                        alt="smile" class="circle z-depth-1">
+                                                                                <span class="foto">Limonito</span>
+                                                                                <p>@monito08 <br>
+                                                                                        hace 14 min
+                                                                                </p>
+                                                                                <a href="#modal4"
+                                                                                        class="secondary-content  modal-trigger">
+                                                                                        <i
+                                                                                                class="small material-icons">looks_two</i></a>
+                                                                        </li>
+                                                                        <li class="collection-item avatar">
+                                                                                <img src="imagenes/storiesimg/pear.jpg"
+                                                                                        alt="smile" class="circle z-depth-1">
+                                                                                <span class="foto">Perita</span>
+                                                                                <p>@perita23 <br>
+                                                                                        Hoy 19:23
+                                                                                </p>
+                                                                                <a href="#modal3"
+                                                                                        class="secondary-content  modal-trigger">
+                                                                                        <i
+                                                                                                class="small material-icons">looks_4</i></a>
+                                                                        </li>
+                                                                        <li class="collection-item avatar">
+                                                                                <img src="imagenes/storiesimg/banana.jpg"
+                                                                                        alt="smile" class="circle z-depth-1">
+                                                                                <span class="foto">banana</span>
+                                                                                <p>@nana_95 <br>
+                                                                                        Hoy 18:06
+                                                                                </p>
+                                                                                <a href="#modal2"
+                                                                                        class="secondary-content  modal-trigger">
+                                                                                        <i
+                                                                                                class="small material-icons">looks_one</i></a>
+        
+                                                                        </li>
+                                                                        <li class="collection-item avatar">
+                                                                                <img src="imagenes/storiesimg/tangerine.jpg"
+                                                                                        alt="smile" class="circle z-depth-1">
+                                                                                <span class="foto">tangerine</span>
+                                                                                <p>@tangy<br>
+                                                                                        Ayer 22:08
+                                                                                </p>
+                                                                                <a href="#modal1" class="secondary-content modal-trigger">
+                                                                                <i class="small material-icons">looks_3</i></a>
+                                                                        </li>
+        
+                                                                </ul>
+                                                        </div>
+                                                        <div id="modal1" class="modal">
+                                                                <div class="modal-content">
+                                                                                <div class="carousel">
+                                                                                                <h4>Tangy life</h4>
+                                                                                                <a class="carousel-item"  href="#one!"><img
+                                                                                                                src="imagenes/storiesimg/sadtangerine.jpg"
+                                                                                                                style="border-radius: 10px;"></a>
+                                                                                                <a class="carousel-item" href="#two!"><img
+                                                                                                                src="imagenes/storiesimg/splashtange.jpg"
+                                                                                                                style="border-radius: 10px;"></a>
+                                                                                                <a class="carousel-item" href="#two!"><img
+                                                                                                                        src="imagenes/storiesimg/fruitcollection.jpg"
+                                                                                                                        style="border-radius: 10px;"></a>
+                                                                                        </div>
+                                                                </div>
+                                                        </div>
+        
+                                                        <div id="modal2" class="modal">
+                                                                <div class="modal-content">
+                                                                <h4>Hey Banana!</h4>
+                                                                <img src="imagenes/storiesimg/banana.jpg" 
+                                                                        alt=""style="border-radius: 10px; height:300px; width:300px;">
+                                                                        
+                                                                </div>
+                                                        </div>
+        
+                                                        <div id="modal3" class="modal">
+                                                                <div class="modal-content">
+                                                                        <div class="carousel">
+                                                                                <h4> Sweet</h4>
+                                                                                <a class="carousel-item" href="#one!"><img
+                                                                                                src="imagenes/storiesimg/dancingpear.jpg"
+                                                                                                style="border-radius: 10px;"></a>
+                                                                                <a class="carousel-item" href="#two!"><img
+                                                                                                src="imagenes/storiesimg/peer.jpg"
+                                                                                                style="border-radius: 10px;"></a>
+                                                                                <a class="carousel-item active" href="#two!"><img
+                                                                                                        src="imagenes/storiesimg/pinkpe.jpg"
+                                                                                                        style="border-radius: 10px;"></a>
+                                                                                <a class="carousel-item" href="#two!"><img
+                                                                                                                src="imagenes/storiesimg/togethpe.jpg"
+                                                                                                                style="border-radius: 10px;"></a>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                                <div id="modal4" class="modal">
+                                                                     <div class="modal-content" >
+                                                                        <div class="carousel">
+                                                                                <h4> Acid but sweet</h4>
+                                                                                <a class="carousel-item" href="#one!"><img
+                                                                                                src="imagenes/storiesimg/acidbut.jpg"
+                                                                                                style="border-radius: 10px;"></a>
+                                                                                <a class="carousel-item" href="#two!"><img
+                                                                                                src="imagenes/storiesimg/fun.jpg"
+                                                                                                style="border-radius: 10px;"></a>
+                                                                        </div>
+                                                                        </div>  
+                                                                </div>
+        
+        
+                                                        </div>
+        
+                                                </div>
+                                                <br>
+                                                <br>
+                                 <!-- Carrusel de Stories-->
+                                    <div class="row">
+                                            <div class="card card-custom">
+                                                    <div class="overlap"></div>
+                                                    <div class="card-image">
+                                                            <img src="imagenes/home/history3.gif" width=200px height=200px alt="" class="responsive-img">
+                                                            <a class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i class="material-icons">add</i></a>
+                                                        </div>
+                                                        <div class="card-content"> 
+                                                            <span class="black-text truncate">Modelando ando</span>
+                                                        </div>
+                                            </div>
+                                    </div> 
+                                    <div class="row center-align">
+                                                <div class="card card-custom">
+                                                        <div class="overlap"></div>
+                                                        <div class="card-image">
+                                                                <img src="imagenes/home/cherrygif.gif" class="">
+                                                                <a class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i class="material-icons">add</i></a>
+                                                        </div>
+                                                        <div class="card-content">
+                                                            <span class="black-text truncate">Hermanos de sangre, en las buenas y malas</span>
+                                                        </div>   
+                                                               
+                                                </div>
+                                        </div> 
+                                        <div class="row center-align">
+                                                        <div class="card card-custom">
+                                                                <div class="overlap"></div>
+                                                                <div class="card-image">
+                                                                        <img src="imagenes/home/aguacatesaltando.gif" class="">
+                                                                        <a class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i class="material-icons">add</i></a>
+                                                                </div>
+                                                                <div class="card-content">
+                                                                    <span class="black-text">Las frutas tambien engordamos</span>
+                                                                </div>   
+                                                                       
+                                                        </div>
+                                         </div> 
+                                         <div class="row center-align">
+                                                        <div class="card card-custom">
+                                                                <div class="overlap"></div>
+                                                                <div class="card-image">
+                                                                        <img src="imagenes/home/virus.gif" class="">
+                                                                        <a class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i class="material-icons">add</i></a>
+                                                                </div>
+                                                                <div class="card-content">
+                                                                    <span class="black-text">Cuidado nuevo virus en la ciudad</span>
+                                                                </div>   
+                                                                       
+                                                        </div>
+                                         </div> 
+                            </div>
+                            <div class="col s6 col-content "  id="wall" >
+                                    
+                                    <div class="card" id="cardThinking">
+                                            <div class="card-content">
+                                                    <p id="feeling"></p>
+                                                    <textarea cols=10 rows=10 spaceholder="Di algo..." id="thinking"></textarea>
+                                                    <p>Qué estás pensando?</p>
+                                                    <i class="material-icons red-text" id="happy">insert_emoticon</i>
+                                                    <i class="material-icons red-text" id="bad">mood_bad</i>
+                                                    <i class="material-icons red-text" id="dissatisfied">sentiment_very_dissatisfied</i>
+                                                    <i class="material-icons red-text" id="neutral">sentiment_neutral</i>
+                                                    <br>
+                                                    <input type="file" id="file" name="file" accept="image/x-png,image/gif,image/jpeg" />
+                                                    <label for="file"><span>Imagen</span></label>
+                                                    <label for="file_multi_video"><span>Video</span></label>
+                                                    <img src="" id="imgThumb" style = "width:140px; height: 110px; display:none">
+                                                    <input type="file" name="file[]" id="file_multi_video" accept="video/*"> 
+                                                    <br>
+                                                    <br>
+                                                    <span style="color: lightslategrey">Vista Previa</span>
+
+                                                    <video width="200" height="200" id="videosolito" controls style="display: none"> 
+                                                            <source src="mov_bbb.mp4" id="video_here"> Your browser does not support HTML5 video. </video> 
+                                                    <output id="list"></output><br>
+                                                    
+                                                    <a  class="float-right waves-effect waves-light btn" id="publicar">Publicar</a>
+                                                    
+                                                </div>       
+                                    </div>
+                                    <div id ="publicaciones"></div>
+                                    <div class="card" id="card1">
+                                                <div class="background-opacity">
+                                                        <img src="imagenes/home/strawberry.png"  width=50px height=50px alt="" class="margin-10">
+                                                        <span class="span-wall">Fresita ha publicado</span>
+                                                </div>
+                                                
+                                                <div class="card-content left-align">
+                                                                <p>Bendecida y afortunada... Cambio de look</p>
+                                                            </div>        
+                                            
+                                            <div class="card-image">
+                                                    <img src="imagenes/home/look.jpg" width=100px height=100px alt="" class="img-wall responsive-img">
+                                                    
+                                            </div>
+                                            
+                                            <div class="row" id="favorite1">
+                                                <div class="col s1">
+                                                <a class=" waves-effect waves-light red btn-floating " onclick="likePub(1)"><i class="material-icons left ligth-text">favorite</i></a>
+                                                </div>
+                                                <div class="col s1">
+                                                <p id="like1"></p>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="comment">
+                                                <textarea id="textarea1" class="estilo-textarea"></textarea>
+                                                <button class="waves-effect waves-light btn" id="comment1" value="Comentar" onClick="gotoNode(1)" >Comentar</button>
+                                            </div>
+                                            <label for="" class='active'>Comentarios</label>
+                                            <div class="remark" id="remark1"></div>
+                                            
+                                                                
+                                            
+                                    </div>
+                                    <div class="card" id="card2">
+                                                <div class="background-opacity">
+                                                        <img src="imagenes/home/orange2.png" width=50px height=50px alt="" class="margin-10">
+                                                        <span class="span-wall">Naranjita ha publicado</span>
+                                                </div>
+                                                
+                                                
+                                                <div class="card-content left-align">
+                                                                <p>Un frutiviaje se mide mejor en amigos que en kilómetros #FranciaLove <i class="material-icons red-text">favorite</i></p>
+                                                            </div>        
+                                            
+                                            <div class="card-image">
+                                                    <img src="imagenes/home/frutasgigantes.jpg" width=100px height=100px alt="" class=" img-wall responsive-img">
+                                                    
+                                            </div>
+                                            <div class="row" id="favorite2">
+                                                        <div class="col s1">
+                                                        <a class=" waves-effect waves-light red btn-floating " onclick="likePub(2)"><i class="material-icons left ligth-text">favorite</i></a>
+                                                        </div>
+                                                        <div class="col s1">
+                                                        <p id="like2"></p>
+                                                        </div>
+                                                    </div>
+                                            
+                                            <div class="comment">
+                                                <textarea id="textarea2" class="estilo-textarea"></textarea>
+                                                <button class="waves-effect waves-light btn" id="comment2" value="Enviar" onClick="gotoNode(2)" >Comentar</button>
+                                            </div> 
+                                            <label for="" class='active'>Comentarios</label>
+                                            <div class="remark" id="remark2"></div>                  
+                                            
+                                    </div>
+                                    <div class="card" id="card3">
+                                                <div class="background-opacity">
+                                                        <img src="imagenes/home/pera2.png"  width=50px height=50px alt="" class="margin-10">
+                                                        <span class="span-wall">Perita ha publicado</span>
+                                                </div>
+                                                
+                                                <div class="card-content left-align">
+                                                                <p>Algún día tenía que casarme, no puedo ser feliz toda la vida! XD <i class="material-icons red-text">favorite</i></p>
+                                                            </div>        
+                                            
+                                            <div class="card-image">
+                                                    <img src="imagenes/home/bodapera.png" width=100px height=100px alt="" class="img-wall responsive-img">
+                                                    
+                                            </div>
+                                            <div class="row" id="favorite3">
+                                                        <div class="col s1">
+                                                        <a class=" waves-effect waves-light red btn-floating " onclick="likePub(3)"><i class="material-icons left ligth-text">favorite</i></a>
+                                                        </div>
+                                                        <div class="col s1">
+                                                        <p id="like3"></p>
+                                                        </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="comment">
+                                                <textarea id="textarea3" class="estilo-textarea" ></textarea>
+                                                <button class="waves-effect waves-light btn" id="comment3" value="Enviar" onClick="gotoNode(3)" >Comentar</button>
+                                            </div>
+                                            <label for="" class='active'>Comentarios</label>
+                                            <div class="remark" id="remark3"></div>
+                                    </div>
+                                    <div class="card" id="card4">
+                                                <div class="background-opacity">
+                                                        <img src="imagenes/home/aguacate.png" width=50px height=50px alt="" class="margin-10">
+                                                        <span class="span-wall">Aguacate ha publicado</span>
+                                                </div>
+                                                
+                                                
+                                                <div class="card-content left-align">
+                                                                <p>Trabajando para ofrecer siempre el mejor servicio 
+                                                                        <i class="material-icons yellow-text">star</i>
+                                                                        <i class="material-icons yellow-text">star</i>
+                                                                        <i class="material-icons yellow-text">star</i>
+                                                                        <i class="material-icons yellow-text">star</i>
+                                                                        <i class="material-icons yellow-text">star</i>
+                                                                </p>
+                                                            </div>        
+                                            
+                                            <div class="card-image">
+                                                    <img src="imagenes/home/paltatrabajando.jpg" width=100px height=100px alt="" class=" img-wall responsive-img">
+                                                    
+                                            </div>
+                                            <div class="row" id="favorite4">
+                                                        <div class="col s1">
+                                                        <a class=" waves-effect waves-light red btn-floating " onclick="likePub(4)"><i class="material-icons left ligth-text">favorite</i></a>
+                                                        </div>
+                                                        <div class="col s1">
+                                                        <p id="like4"></p>
+                                                        </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="comment">
+                                                <textarea id="textarea4" class="estilo-textarea"></textarea>
+                                                <button class="waves-effect waves-light btn" id="comment4" value="Enviar" onClick="gotoNode(4)" >Comentar</button>
+                                            </div>    
+                                            <label for="" class='active'>Comentarios</label>
+                                            <div class="remark" id="remark4"></div>             
+                                            
+                                    </div>
+                                    <div class="card" id="card5">
+                                                <div class="background-opacity">
+                                                        <img src="imagenes/home/piña.png" width=50px height=50px alt="" class="margin-10">
+                                                        <span class="span-wall">Aguacate ha publicado</span>
+                                                </div>
+                                                
+                                                
+                                                <div class="card-content left-align">
+                                                                <p>#MamáEstoyTriunfando Haciendo mi mejor esfuerzo en Hollywood
+                                                                </p>
+                                                                <i class="material-icons pink-text">tag_faces</i>
+                                                                <i class="material-icons pink-text">tag_faces</i>
+                                                            </div>        
+                                            
+                                            <div class="card-image">
+                                                    <img src="imagenes/home/bobsponge.png" width=100px height=100px alt="" class=" img-wall responsive-img">
+                                                    
+                                            </div>
+                                            <div class="row" id="favorite5">
+                                                        <div class="col s1">
+                                                        <a class=" waves-effect waves-light red btn-floating " onclick="likePub(5)"><i class="material-icons left ligth-text">favorite</i></a>
+                                                        </div>
+                                                        <div class="col s1">
+                                                        <p id="like5"></p>
+                                                        </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="comment">
+                                                <h2 id= "userComment">  </h2>
+                                                <textarea id="textarea5" class="estilo-textarea"></textarea>
+                                                <button class="waves-effect waves-light btn" id="comment5" value="Enviar" onClick="gotoNode(5)" >Comentar</button>
+                                            </div>  
+                                            <label for="" class='active'>Comentarios</label>
+                                            <div class="remark" id="remark5"></div>                  
+                                            
+                                    </div>
+                                    <div class="card">
+                                                
+                                    </div>
+                            </div>
+                            <div class="col s3  col-content cards_event fondofrutas"  id="events">
+                                
+                                        <ul class="collection">
+                                                        <li class="collection-item avatar">
+                                                          <img src="imagenes/home/fresafriend.png" alt="" class="circle">
+                                                          <span class="title purple-text">Smootcandy</span>
+                                                          <p>2 Amigos en común</p>
+                                                          <a href="#!" class="secondary-content" onclick="alert('Ahora son amigos')"><img src="imagenes/home/addfriend.png"  width=22px height=20px alt=""></a>
+                                                        </li>
+                                                        <li class="collection-item avatar">
+                                                          <img src="imagenes/home/banana2.png" alt="" class="circle">
+                                                          <span class="title brown-text">El jugoso</span>
+                                                          <p>Quiero conocerte...
+                                                          </p>
+                                                          <a href="#!" class="secondary-content" onclick="alert('Ahora son amigos')"><img src="imagenes/home/addfriend.png"  width=22px height=20px alt=""></a>
+                                                        </li>
+                                                        <li class="collection-item avatar">
+                                                                <img src="imagenes/home/uva.png" alt="" class="circle">
+                                                          <span class="title deep-purple-text">Freskesita</span>
+                                                          <p>Sigues a este usuario
+                                                          </p>
+                                                          <a href="#!" class="secondary-content" onclick="alert('Ahora son amigos')"><img src="imagenes/home/addfriend.png"  width=22px height=20px alt=""></a>
+                                                        </li>
+                                                        <li class="collection-item avatar">
+                                                                        <img src="imagenes/home/mandarina.jpg" alt="" class="circle">
+                                                          <span class="title orange-text darken-4">Susy´s </span>
+                                                          <p> Amigo sugerido
+                                                          </p>
+                                                          <a href="#!" class="secondary-content" onclick="alert('Ahora son amigos')"><img src="imagenes/home/addfriend.png"  width=22px height=20px alt=""></a>
+                                                        </li>
+                                                      </ul>
+
+                                <div class="card">
+                                        <div class="card-image">       
+                                        </div>
+                                </div>
+                                <div class="card size-events">
+                                        <div class="card-image ">
+                                                <img src="imagenes/home/harvestfestival.jpg"  alt="" class="responsive-img">
+                                                        
+                                        </div>
+                                </div>
+                                <div class="card size-events">
+                                                <div class="card-image">
+                                                        <img src="imagenes/home/festivalfrutas.jpg" alt="" class="responsive-img ">
+                                                                
+                                                </div>
+                                </div>
+                                <div class="card size-events">
+                                                <div class="card-image">
+                                                        <img src="imagenes/home/vishu.jpg" alt="" class="responsive-img ">
+                                                                
+                                                </div>
+                                </div>
+                            </div>
+                    </div>
+
+    </div>
+    <div class="row ">
+                <footer class="page-footer">
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="col l6 s12">
+                                      <h5 class="white-text"></h5>
+                                       </div>
+                                  </div>
+                                </div>
+                                <div class="footer-copyright">
+                                  <div class="container">
+                                  © 2019 Copyright BIT
+                                  </div>
+                                </div>
+                              </footer>
+                        
+    </div>
+    <script type="text/javascript" src="js/publication/scriptImagen.js"></script>!
+    <!--Scripts de Stories-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/stories/scrip.js"></script>
+    <script src="js/stories/stories.js"></script>
+    <!--Scripts de Stories-->
+</body>
+</html>

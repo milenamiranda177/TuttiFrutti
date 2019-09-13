@@ -76,18 +76,41 @@
                             <div class="col s3 white col-content"  id="historys">
                                     <h5>Stories</h5>
                                     <div class="row center-align">
-                                            <div class="card card-custom">
-                                                    <div class="overlap"></div>
-                                                    <div class="card-image">
-                                                            <img src="imagenes/home/history1.gif" class="">
-                                                            <a class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i class="material-icons">add</i></a>
-                                                    </div>
-                                                    <div class="card-content">
-                                                        <span class="black-text truncate">Adelantando cuaderno</span>
-                                                    </div>   
-                                                           
-                                            </div>
-                                    </div> 
+
+                                                <div class="card card-custom">
+        
+                                                        <div class="card-content">                                                        
+                                                                <div class="row center-align">                                                        
+                                                                        <img id="imgSubida" src="#" alt="your image"
+                                                                                style="object-fit: contain;" class="none"
+                                                                                onerror="this.style.display='none'" width="200"
+                                                                                height="200" />
+        
+                                                                        <video autoplay id="videoSubido" src="#" width="200"
+                                                                                height="200" style="object-fit: cover;"></video>
+        
+                                                                        <p id="textoSubido" class="none"
+                                                                                style="width: 200px; height: 200px; word-break: normal; white-space: normal">
+        
+                                                                        </p>
+                                                                </div>
+                                                                <div class="row">
+                                                                        <a class="btn-floating halfway-fab waves-effect waves-light red btn modal-trigger"
+                                                                                href="#modal7"><i
+                                                                                        class="material-icons">add</i></a>
+                                                                        <span class="black-text truncate">Mis historias
+                                                                                </span>
+                                                                </div>                                                        
+                                                        </div>
+        
+                                                </div>
+                                                <div id="contenido">
+                                                        <p>Tu última historia</p>
+                                                        <div id="misHistorias" class="carousel" data-indicators="true">
+                                                        </div>
+                                                </div>
+        
+                                        </div> 
                                     <!-- Carrusel de Stories-->
                                     <div class="row">
                                                 <div id="storiescont" class="card card-custom">
@@ -557,17 +580,65 @@
                 </footer>
         
             </div>
+            <!-- *************** INICIO FUNCIONALIDAD CARGAR STORIES ************ -->
+        <div id="modal7" class="modal modal-fixed-footer">
+                        <div class="modal-content center-align">
+                                <h4>Nueva historia</h4>
+                                <div class="row">
+                                        <label
+                                                class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+                                                <i class="material-icons md-48 md-dark">add_a_photo</i>
+                                                <input id="inputImagen" type="file" class="none" required
+                                                        accept=".jpg,.jpeg,.gif,.png" />
+                                        </label>
+                                        <label
+                                                class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+                                                <i class="material-icons md-48 md-dark">videocam</i>
+                                                <input id="inputVideo" type="file" class="none" required accept=".mp4,.3gp" />
+                                        </label>
+                                        <label id="inputTexto"
+                                                class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+                                                <i class="material-icons md-48 md-dark">text_format</i>
+                                        </label>
+                                </div>
+                                <div class="row center-align">
+                                        <div class="video-container none" id="videoContainer">
+                                                <video id="myVideo" src="#" width="320" height="240" controls></video>
+                                        </div>
+        
+                                        <img id="myImg" src="#" alt="your image" class="none" width=400
+                                                onerror="this.style.display='none'" />
+        
+                                        <div id="contTextHistoria" class="none">
+                                                <p id="textoHistoria">
+                                                        <textarea id="textoTemp"
+                                                                placeholder="Escribe tu texto aquí..."></textarea>
+                                                </p>
+                                                <span id="cambiarColor">
+                                                        <i class="material-icons md-48 md-dark">color_lens</i>
+                                                </span>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                                <a href="#!" id="subirHistoria" class="modal-close waves-effect waves-green btn">Subir
+                                        historia</a>
+                        </div>
+                </div>
+                <!-- *************** FIN FUNCIONALIDAD CARGAR STORIES ************ -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/publication/scriptImagen.js"></script>!
     <!--Scripts de Stories-->
-    <script type="text/javascript" src="js/stories/scrip.js"></script>
+    <script src="js/stories/script.js"></script>
     <script src="js/stories/stories.js"></script>
     <!--Scripts de Stories-->
     <!--Scripts de Header-->
     <script type="text/javascript" src="js/header.js"></script>
     <!--Scripts de Validaciones-->
     <script type="text/javascript" src="js/home.js"></script>
+
     
     
 </body>

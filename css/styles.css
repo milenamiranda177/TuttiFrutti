@@ -79,7 +79,7 @@ input::placeholder {
   width:227px !important;
   height:297px !important;
   background:rgba(133, 121, 121, 0.2);
-  z-index: 9000;
+  z-index: 9;
 }
 .overlap-header {
   position: fixed !important;

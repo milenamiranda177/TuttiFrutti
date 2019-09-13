@@ -2,225 +2,266 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/materialize.min-custom.css">
- <link rel="stylesheet" href="css/styles.css">
-  <title>Perfil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/materialize.min-custom.css" media="screen,projection">
+
+    <title>Perfil</title>
 </head>
 
-<body>
-  <div class="overlap-header"></div>
-  <div class="container content-custom-width">
-      <div class="row">
-          <div class="col s2" id="logo">
-                  <div class="card-content">
-                    <img src="imagenes/home/tuttifrutti.png" width=200px height=220px alt="" class=" responsive-img">
-                    
-                  </div>
-          </div>
-          <div class="col s5" id="dividerheader"></div>
-          <div class="col s3 input-field" id="search">
-                    <i class="material-icons tiny prefix orange-text darken-1 padding-10">search</i>
-                  <input type="text" class="orange-text darken-1" placeholder="Buscar...">
-          </div>
-          <div class="col s1" id="notification">
-              <a href="#" onclick="alert('Tienes 4 mensajes sin leer, ve a chat')"><img src="imagenes/home/notification.jpg"  width=35px height=35px alt="" class="notification responsive-img">
-              </a></div>
-          <div class="col s1 center-align" id="profile">
-              <a href="perfil.html" class="black-text"><img src="imagenes/perfil/perfil.jpg" width=80px height=80px alt="" class="circle responsive-img">
-                Bennet</a>
-          </div>
-      </div>
-    <div class="row">
-        <div class="row">
-            <div class="border-radius-5-left padding-10 light-green col s3 pink lighten-1 center-align">
-                            <div class="card-content light-green lighten-1 white-text ">
-                                  <a href="home.html" class="white-text"><i class="iconos_absolute material-icons">shopping_basket</i> <span>FRUTERO</span></a>   
-                            </div>
-                        </div>
-                        <div  class="padding-10 col s3 pink center-align">
-                            <div class="card-content pink  white-text">
-                                    <a href="perfil.html" class="white-text"><i class="iconos_absolute material-icons">wb_sunny</i> <span>PERFIL</span></a>         
-                            </div>
-                        </div>
-                        <div  class="padding-10 col s3 light-green lighten-1 center-align">
-                            <div class="card-content light-green lighten-1 white-text">
-                                   
-                                    <a href="chat.html" class="white-text"> <i class="iconos_absolute material-icons">chat</i> <span>FRUTICHAT</span> </a>
-                            </div>
-                        </div>
-                        <div  class="border-radius-5-right padding-10 col s3 light-green center-align">
-                            <div class="card-content light-green  white-text">
-                                    <a href="index.html" class="white-text"><i class="iconos_absolute material-icons">exit_to_app </i><span>SALIR</span> </a>
-                            </div>
-                        </div>
-</div>
-      <div class="fotoperfil">
-        <div class="col s12 m4 l3">
+<body class="fondo">
+    <!-- HEADAER -->
+    <header class="menu-cambia">
+        <div class="overlap-header menu-cambia"></div>
+        <div class="container content-custom-width fixedheader">
+            <div class="row ">
+                <div class="col s2" id="logo">
+                    <div class="card-content">
+                        <img src="imagenes/home/tuttifrutti.png" alt="" class="img_logo responsive-img">
 
-              <img src="imagenes/perfil/perfil.jpg" alt="perfil" class="circle responsive-img z-depth-5" width="310px">
-              <span class="card-title gray-text text-darken-2 center">
-                <h3>Piña Bennet</h3>
-              </span>
-              <i class="material-icons">contact_phone</i>
-
-              
-                <div class="bio">
-                  <h5 class="gray-text text-darken-1"> Bio:</h5>
-                  <h6 class="center">"Piña muy fresca y natural".</h6><br><br>
-                  <h5 class="gray-text text-darken-1"> Website:</h5>
-                  <h6 class="center">http://www.pinaexpress.com</h6>
-
-                  <h5 class="gray-text text-darken-1">Intereses:</h5>
-                  <i class="material-icons">fitness_center</i>
-                  <i class="material-icons">flight</i>
-                  <i class="material-icons">palette</i>
-                  <i class="material-icons">library_music</i>
-                  <i class="material-icons">restaurant_menu</i>
+                    </div>
                 </div>
-              
+                <div class="col s5" id="dividerheader"></div>
+                <div class="col s3 input-field" id="search">
+                    <i class="material-icons tiny prefix orange-text darken-1 padding-10 ">search</i>
+                    <input type="text" style="background-color: rgba(234, 204, 236, 0.445)" class="orange-text darken-1" placeholder="Buscar...">
+                </div>
+                <div class="col s1" id="notification">
+                    <a href="chat.html" onclick="alert('Tienes 4 mensajes sin leer, ve a chat')">
+                        <img src="imagenes/home/notification.jpg" alt="" class="img_alerta notification responsive-img">
+                    </a>
+                </div>
+                <div class="col s1 center-align" id="profile">
+                    <a href="perfil.html" class="black-text">
+                        <img src="imagenes/perfil/perfil.jpg" width=80px height=80px alt="" class="circle responsive-img sombra">
+                        <h6 class="orange-text darken-4 fuente">Bennet</h6>
+                    </a>
+                </div>
             </div>
+
+            <div class="row">
+                <div class="padding-10 col s3 light-green center-align">
+                    <div class="card-content light-green  white-text">
+                        <a href="home.html" class="white-text"><i class="iconos_absolute material-icons">shopping_basket</i> <span>FRUTERO</span></a>
+                    </div>
+                </div>
+                <div class="padding-10 col s3 pink center-align">
+                    <div class="card-content pink  white-text">
+                        <a href="perfil.html" class="white-text"><i class="iconos_absolute material-icons">wb_sunny</i> <span>PERFIL</span></a>
+                    </div>
+                </div>
+                <div class="padding-10 col s3 light-green lighten-1 center-align">
+                    <div class="card-content light-green lighten-1 white-text">
+
+                        <a href="chat.html" class="white-text"> <i class="iconos_absolute material-icons">chat</i> <span>FRUTICHAT</span> </a>
+                    </div>
+                </div>
+                <div class="border-radius-5-right padding-10 col s3 light-green center-align">
+                    <div class="card-content light-green  white-text">
+                        <a href="index.html" class="white-text"><i class="iconos_absolute material-icons">exit_to_app </i><span>SALIR</span> </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <!-- FIN HEADER -->
+
+    <div class="container content-custom-width ">
+        <!-- dentro de este div va el contenido de la pagina-->
+
+        <div class="row padi">
+            <div class="fotoperfil">
+                <div class="col s12 m4 l3">
+
+                    <img src="imagenes/perfil/perfil.jpg" alt="perfil" class="circle responsive-img z-depth-5" width="310px">
+                    <span class="card-title gray-text text-darken-2 center">
+            <h3>Piña Bennet</h3>
+          </span>
+                    <i class="material-icons">contact_phone</i>
+
+
+                    <div class="bio">
+                        <h5 class="gray-text text-darken-1"> Bio:</h5>
+                        <h6 class="center">"Piña muy fresca y natural".</h6><br><br>
+                        <h5 class="gray-text text-darken-1"> Website:</h5>
+                        <h6 class="center">http://www.pinaexpress.com</h6>
+
+                        <h5 class="gray-text text-darken-1">Intereses:</h5>
+                        <i class="material-icons">fitness_center</i>
+                        <i class="material-icons">flight</i>
+                        <i class="material-icons">palette</i>
+                        <i class="material-icons">library_music</i>
+                        <i class="material-icons">restaurant_menu</i>
+                    </div>
+
+                </div>
+            </div>
+            <!--fin perfil-->
+
+            <!--muro-->
+            <div class="mural">
+                <div class="col s12 m4 l5">
+                    <div class="card">
+                        <div class="card-content">
+
+
+                            <div class="noticia">
+                                <div class="z-depth-5">
+                                    <div class="card-image">
+                                        <img src="imagenes/perfil/noticia1.jpg">
+                                        <span class="card-title black-text"><h5>Día en la playa!</h5>
+    </div>
+          <div class="card-content">
+          <p>Nuestra visita a las playas en Cancun..</p>
           </div>
-        <!--fin perfil-->
-
-<!--muro-->
-<div class="mural">
-    <div class="col s12 m4 l5">
-    <div class="card">
-    <div class="card-content">
-        
-            
-    <div class="noticia">  
-        <div class="z-depth-5">
-        <div class="card-image">                  
-        <img src="imagenes/perfil/noticia1.jpg">
-        <span class="card-title black-text"><h5>Día en la playa!</h5>
-        </div>
-              <div class="card-content">
-              <p>Nuestra visita a las playas en Cancun..</p>
-              </div>
-              <a class="waves-effect waves-light btn-small blue-grey lighten-4"><i class="material-icons left">star</i>Me gusta!</a>
-              <i class="material-icons right">visibility</i><p class="right">550</p>
-        </div><br>
-    </div>
-
-     
-    
-        <div class="z-depth-5">
-        <div class="card-image">                   
-        <img src="imagenes/perfil/noticia2.jpg">
-        <span class="card-title black-text"><h5>Evento</h5></span>
-        </div>
-                <div class="card-content">
-                <p>Marcha anual! <br> Fruuutaaas y Vegeeeetaaaaless....</p>
-                </div>  
-                <a class="waves-effect waves-light btn-small blue-grey lighten-4"><i class="material-icons left">star</i>Me gusta!</a>                        
-                <i class="material-icons right">visibility</i><p class="right">1250</p>
-        </div><br>
-       
-
-    
-    
-        <div class="z-depth-5">
-        <div class="card-image">
-        <img src="imagenes/perfil/noticia3.jpg">                  
-        </div>
-                <div class="card-content">
-                <p>Piña Dulce!! </p>
-                </div>  
-                <a class="waves-effect waves-light btn-small blue-grey lighten-4"><i class="material-icons left">star</i>Me gusta!</a>                        
-                <i class="material-icons right">visibility</i><p class="right">1250</p>
-        </div> 
-    </div>             
-    </div>
-    </div>
+          <a class="waves-effect waves-light btn-small blue-grey lighten-4"><i class="material-icons left">star</i>Me gusta!</a>
+          <i class="material-icons right">visibility</i><p class="right">550</p>
+    </div><br>
 </div>
-<!--fin muro-->
 
-<!--sugerencias-->
-<div class="sugerencias">
-    <div class="col s12 m4 ">               
-       <div class="card">
-       <div class="card-content blue-grey lighten-4">                
-       <span class="card-title"><h6 class="text-muted">Sugerencias:</h6></span>   
-       
-        <!--amigo 1-->
-       <div class="card-panel grey lighten-5 z-depth-1">
-           <div class="row valign-wrapper">
-           <div class="col s4">
-           <img src="imagenes/perfil/papa.jpg" alt="amigo1" class="circle responsive-img">
-           </div>
-           <div class="col s9">
-           <span class="black-text"> <h7>Señor Papa</h7>
-           <a class="btn-floating btn-large waves-effect waves-light blue-grey lighten-3"><i class="material-icons">person_add</i></a>
-       </span>
-       </div>
-       </div>
-       </div>
+ 
 
-        <!--amigo 2-->
-        <div class="card-panel grey lighten-5 z-depth-1">
-             <div class="row valign-wrapper">
-             <div class="col s4">
-             <img src="imagenes/perfil/pear.jpg" alt="amigo2" class="circle responsive-img">
-             </div>
-             <div class="col s6">
-             <span class="black-text"><h7>Pear Perez</h7>
-             <a class="btn-floating btn-large waves-effect waves-light blue-grey lighten-3"><i class="material-icons">person_add</i></a>                
-         </span>
-         </div>
-         </div>
-         </div>  
- </div>  
-</div>
-    
-      <!--fin sugerencias-->
-
-<!--fotos-->
-<div id="tabla">
-    <table><h5 class="text-responsive">Fotos</h5>
-       <tr class="grey lighten-5 z-depth-1">
-           <td><img src="imagenes/perfil/foto1.jpg" class="responsive-img" height="100px" width="100px"></td>
-           <td><img src="imagenes/perfil/foto2.jpg" class="responsive-img" height="100px" width="100px"></td>
-           <td><img src="imagenes/perfil/foto3.jpg" class="responsive-img" height="100px" width="100px"></td>
-       </tr>
-
-       <tr class="grey lighten-5 z-depth-1">
-           <td><img src="imagenes/perfil/foto4.jpg" class="responsive-img" height="100px" width="100px"></td>
-           <td><img src="imagenes/perfil/foto5.jpg" class="responsive-img" height="100px" width="100px"></td>
-           <td><img src="imagenes/perfil/foto6.jpg" class="responsive-img" height="100px" width="100px"></td>
-        </tr>
-    </table>
-</div>
-</div> 
-</div>
-<!--fin fotos-->
+    <div class="z-depth-5">
+    <div class="card-image">                   
+    <img src="imagenes/perfil/noticia2.jpg">
+    <span class="card-title black-text"><h5>Evento</h5></span>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>Marcha anual! <br> Fruuutaaas y Vegeeeetaaaaless....</p>
+                                    </div>
+                                    <a class="waves-effect waves-light btn-small blue-grey lighten-4"><i class="material-icons left">star</i>Me gusta!</a>
+                                    <i class="material-icons right">visibility</i>
+                                    <p class="right">1250</p>
+                                </div><br>
 
 
-    </div>
-    
-  </div>
-  <div class="row ">
-      <footer class="page-footer">
-                      <div class="container">
-                        <div class="row">
-                          <div class="col l6 s12">
-                            <h5 class="white-text"></h5>
-                             </div>
+
+
+                                <div class="z-depth-5">
+                                    <div class="card-image">
+                                        <img src="imagenes/perfil/noticia3.jpg">
+                                    </div>
+                                    <div class="card-content">
+                                        <p>Piña Dulce!! </p>
+                                    </div>
+                                    <a class="waves-effect waves-light btn-small blue-grey lighten-4"><i class="material-icons left">star</i>Me gusta!</a>
+                                    <i class="material-icons right">visibility</i>
+                                    <p class="right">1250</p>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <div class="footer-copyright">
-                        <div class="container">
-                        © 2019 Copyright BIT
+                    </div>
+                </div>
+                <!--fin muro-->
+
+                <!--sugerencias-->
+                <div class="sugerencias">
+                    <div class="col s12 m4 ">
+                        <div class="card">
+                            <div class="card-content blue-grey lighten-4">
+                                <span class="card-title"><h6 class="text-muted">Sugerencias:</h6></span>
+
+                                <!--amigo 1-->
+                                <div class="card-panel grey lighten-5 z-depth-1">
+                                    <div class="row valign-wrapper">
+                                        <div class="col s4">
+                                            <img src="imagenes/perfil/papa.jpg" alt="amigo1" class="circle responsive-img">
+                                        </div>
+                                        <div class="col s9">
+                                            <span class="black-text"> <h7>Señor Papa</h7>
+                                                <a class="btn-floating btn-large waves-effect waves-light blue-grey lighten-3"><i class="material-icons">person_add</i></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--amigo 2-->
+                                <div class="card-panel grey lighten-5 z-depth-1">
+                                    <div class="row valign-wrapper">
+                                        <div class="col s4">
+                                            <img src="imagenes/perfil/pear.jpg" alt="amigo2" class="circle responsive-img">
+                                        </div>
+                                        <div class="col s6">
+                                            <span class="black-text"><h7>Pear Perez</h7>
+                                                <a class="btn-floating btn-large waves-effect waves-light blue-grey lighten-3"><i class="material-icons">person_add</i></a>                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </footer>
-              
-</div>
+
+                        <!--fin sugerencias-->
+
+                        <!--fotos-->
+                        <div id="tabla">
+                            <table>
+                                <h5 class="text-responsive">Fotos</h5>
+                                <tr class="grey lighten-5 z-depth-1">
+                                    <td><img src="imagenes/perfil/foto1.jpg" class="responsive-img" height="100px" width="100px"></td>
+                                    <td><img src="imagenes/perfil/foto2.jpg" class="responsive-img" height="100px" width="100px"></td>
+                                    <td><img src="imagenes/perfil/foto3.jpg" class="responsive-img" height="100px" width="100px"></td>
+                                </tr>
+
+                                <tr class="grey lighten-5 z-depth-1">
+                                    <td><img src="imagenes/perfil/foto4.jpg" class="responsive-img" height="100px" width="100px"></td>
+                                    <td><img src="imagenes/perfil/foto5.jpg" class="responsive-img" height="100px" width="100px"></td>
+                                    <td><img src="imagenes/perfil/foto6.jpg" class="responsive-img" height="100px" width="100px"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--fin fotos-->
+
+
+            </div>
+
+
+            <!--Aqui termina el contenido de la pagina -->
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="row">
+            <footer class="page-footer fondo-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l4 s12 ">
+                            <h4 class="orange-text text-darken-4 center fuente">Tutti Frutti</h4>
+                            <p class="orange-text text-darken-4 center">La mejor red social para todas las frutas del mercado.</p>
+                        </div>
+                        <div class="col l4 offset-l2 s12 fuente center">
+                            <ul>
+                                <li class="padding-3"><a class="link" href="home.html">>>>FRUTERO<<<</a></li>
+                                <li class="padding-3"><a class="link" href="perfil.html">>>>PERFIL<<<</a></li>
+                                <li class="padding-3"><a class="link" href="chat.html">>>>FRUTICHAT<<<</a></li>
+                                <li class="padding-3"><a class="link" href="index.html">>>>SALIR<<<</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+
+                        <a class="orange-text text-darken-4 left" href="#">© 2014 Copyright Text</a>
+                        <a class="orange-text text-darken-4 right" href="#">BIT Group</a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- FIN FOOTER -->
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/header.js"></script>
 </body>
 
 </html>

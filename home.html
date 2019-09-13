@@ -15,55 +15,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>TuttiFrutti</title>
 </head>
-<body>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <div class="overlap-header"></div>
-    <div class="container content-custom-width">
-                <div class="row ">
-                                <div class="col s2" id="logo">
-                                                <div class="card-content">
-                                                  <img src="imagenes/home/tuttifrutti.png" width=200px height=220px alt="" class=" responsive-img">
-                                                 
-                                                </div>
-                                        </div>
-                                        <div class="col s5" id="dividerheader"></div>
-                                        <div class="col s3 input-field" id="search">
-                                                 <i class="material-icons tiny prefix orange-text darken-1 padding-10">search</i>
-                                                <input type="text" class="orange-text darken-1" placeholder="Buscar...">
-                                        </div>
-                                        <div class="col s1" id="notification">
-                                            <a href="#" onclick="alert('Tienes 4 mensajes sin leer, ve a chat')"><img src="imagenes/home/notification.jpg"  width=35px height=35px alt="" class="notification responsive-img">
-                                            </a></div>
-                                        <div class="col s1 center-align" id="profile">
-                                             <a href="perfil.html" class="black-text"><img src="imagenes/perfil/perfil.jpg" width=80px height=80px alt="" class="circle responsive-img">
-                                                Bennet</a>
-                                        </div>
+<body class="fondo">
+    <header class="menu-cambia">
+                <div class="overlap-header menu-cambia"></div>
+                <div class="container content-custom-width fixedheader">
+                    <div class="row ">
+                        <div class="col s2" id="logo">
+                            <div class="card-content">
+                                <img src="imagenes/home/tuttifrutti.png" alt="" class="img_logo responsive-img">
+        
+                            </div>
+                        </div>
+                        <div class="col s5" id="dividerheader"></div>
+                        <div class="col s3 input-field" id="search">
+                            <i class="material-icons tiny prefix orange-text darken-1 padding-10 ">search</i>
+                            <input type="text" style="background-color: rgba(234, 204, 236, 0.445)" class="orange-text darken-1" placeholder="Buscar...">
+                        </div>
+                        <div class="col s1" id="notification">
+                            <a href="chat.html" onclick="alert('Tienes 4 mensajes sin leer, ve a chat')">
+                                <img src="imagenes/home/notification.jpg" alt="" class="img_alerta notification responsive-img">
+                            </a>
+                        </div>
+                        <div class="col s1 center-align" id="profile">
+                            <a href="perfil.html" class="black-text">
+                                <img src="imagenes/perfil/perfil.jpg" width=80px height=80px alt="" class="circle responsive-img sombra">
+                                <h6 class="orange-text darken-4 fuente">Bennet</h6>
+                            </a>
+                        </div>
                     </div>
+        
                     <div class="row">
-                                <div class="border-radius-5-left padding-10 col s3 pink lighten-1 center-align">
-                                                <div class="card-content pink lighten-1 white-text ">
-                                                      <a href="home.html" class="white-text"><i class="iconos_absolute material-icons">shopping_basket</i> <span>FRUTERO</span></a>   
-                                                </div>
-                                            </div>
-                                            <div  class="padding-10 col s3 light-green center-align">
-                                                <div class="card-content light-green  white-text">
-                                                        <a href="perfil.html" class="white-text"><i class="iconos_absolute material-icons">wb_sunny</i> <span>PERFIL</span></a>         
-                                                </div>
-                                            </div>
-                                            <div  class="padding-10 col s3 light-green lighten-1 center-align">
-                                                <div class="card-content light-green lighten-1 white-text">
-                                                       
-                                                        <a href="chat.html" class="white-text"> <i class="iconos_absolute material-icons">chat</i> <span>FRUTICHAT</span> </a>
-                                                </div>
-                                            </div>
-                                            <div  class="border-radius-5-right padding-10 col s3 light-green center-align">
-                                                <div class="card-content light-green  white-text">
-                                                        <a href="index.html" class="white-text"><i class="iconos_absolute material-icons">exit_to_app </i><span>SALIR</span> </a>
-                                                </div>
-                                            </div>
+                        <div class="border-radius-5-left padding-10 col s3 pink lighten-1 center-align">
+                            <div class="card-content pink lighten-1 white-text ">
+                                <a href="home.html" class="white-text"><i class="iconos_absolute material-icons">shopping_basket</i> <span>FRUTERO</span></a>
+                            </div>
+                        </div>
+                        <div class="padding-10 col s3 light-green center-align">
+                            <div class="card-content light-green  white-text">
+                                <a href="perfil.html" class="white-text"><i class="iconos_absolute material-icons">wb_sunny</i> <span>PERFIL</span></a>
+                            </div>
+                        </div>
+                        <div class="padding-10 col s3 light-green lighten-1 center-align">
+                            <div class="card-content light-green lighten-1 white-text">
+        
+                                <a href="chat.html" class="white-text"> <i class="iconos_absolute material-icons">chat</i> <span>FRUTICHAT</span> </a>
+                            </div>
+                        </div>
+                        <div class="border-radius-5-right padding-10 col s3 light-green center-align">
+                            <div class="card-content light-green  white-text">
+                                <a href="index.html" class="white-text"><i class="iconos_absolute material-icons">exit_to_app </i><span>SALIR</span> </a>
+                            </div>
+                        </div>
+        
                     </div>
-                    <div class="row" >
+        
+                </div>
+        </header>
+    <div class="container content-custom-width">
+                    <div class="row padi" >
                             <div class="col s3 white col-content"  id="historys">
                                     <h5>Stories</h5>
                                     <div class="row center-align">
@@ -518,27 +527,45 @@
                     </div>
 
     </div>
-    <div class="row ">
-                <footer class="page-footer">
-                                <div class="container">
-                                  <div class="row">
-                                    <div class="col l6 s12">
-                                      <h5 class="white-text"></h5>
-                                       </div>
-                                  </div>
-                                </div>
-                                <div class="footer-copyright">
-                                  <div class="container">
-                                  © 2019 Copyright BIT
-                                  </div>
-                                </div>
-                              </footer>
-                        
-    </div>
+    <!-- FOOTER -->
+
+    <div class="row">
+                <footer class="page-footer fondo-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col l4 s12 ">
+                                <h4 class="orange-text text-darken-4 center fuente">Tutti Frutti</h4>
+                                <p class="orange-text text-darken-4 center">La mejor red social para todas las frutas del mercado.</p>
+                            </div>
+                            <div class="col l4 offset-l2 s12 fuente center">
+                                <ul>
+                                    <li class="padding-3"><a class="link" href="home.html">>>>FRUTERO<<<</a></li>
+                                    <li class="padding-3"><a class="link" href="perfil.html">>>>PERFIL<<<</a></li>
+                                    <li class="padding-3"><a class="link" href="chat.html">>>>FRUTICHAT<<<</a></li>
+                                    <li class="padding-3"><a class="link" href="index.html">>>>SALIR<<<</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright">
+                        <div class="container">
+        
+                            <a class="orange-text text-darken-4 left" href="#">© 2014 Copyright Text</a>
+                            <a class="orange-text text-darken-4 right" href="#">BIT Group</a>
+                        </div>
+                    </div>
+                </footer>
+        
+            </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/publication/scriptImagen.js"></script>!
     <!--Scripts de Stories-->
     <script type="text/javascript" src="js/stories/scrip.js"></script>
     <script src="js/stories/stories.js"></script>
     <!--Scripts de Stories-->
+    <!--Scripts de Header-->
+    <script type="text/javascript" src="js/header.js"></script>
+    <!--Scripts de Header-->
 </body>
 </html>

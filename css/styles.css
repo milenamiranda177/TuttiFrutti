@@ -1,3 +1,54 @@
+/* Header */
+
+.fixedheader {
+  position: fixed;
+  width: 500px;
+  height: 200px;
+  left: 17%;
+  right: 17%;
+  z-index: +20;
+}
+
+.img_logo {
+  width: 200px;
+  height: 220px;
+}
+
+.img_alerta {
+  width: 35px;
+  height: 35px;
+}
+
+.padi {
+  padding-top: 200px;
+}
+
+.sombra {
+  border-color: rgb(255, 144, 0);
+  box-shadow: 0 1px 1px rgba(164, 23, 229, 0.075)inset, 0 0 20px rgba(255, 0, 234, 0.6);
+}
+
+input::placeholder {
+  color: rgba(255, 123, 0, 0.808);
+}
+
+
+/* tamñaños para el menu pequeño */
+
+.menu-cambia.small img {
+  width: 70%;
+  height: 70%;
+  margin-top: 10px;
+}
+
+.menu-cambia.small li {
+  margin-top: 100px;
+}
+
+.menu-cambia.small a {
+  font-family: "Signika-Bold";
+}
+
 /* Home */
 
 .notification{
@@ -7,6 +58,11 @@
 .padding-10{
   padding: 10px !important;
 }
+
+.padding-3 {
+  padding-bottom: 10px !important;
+}
+
 .border-radius-5-left{
   border-radius: 5px 0px 0px 5px !important;
 }
@@ -25,16 +81,17 @@
   background:rgba(133, 121, 121, 0.2);
   z-index: 9000;
 }
-.overlap-header{
-  position: absolute !important;
-  width:100% !important;
-  height:100px !important;
-  background-image: url("../imagenes/home/fondopatron.jpg");
-  background:rgba(234, 246, 99, 0.26);
-  z-index: -2;
+.overlap-header {
+  position: fixed !important;
+  width: 100% !important;
+  height: 150px !important;
+  background-image: url("../imagenes/header.jpg");
+  border-color: rgb(255, 144, 0);
+  box-shadow: 0 1px 1px rgba(164, 23, 229, 0.075)inset, 0 0 8px rgba(255, 0, 234, 0.6);
+  z-index: 12;
 }
 .zindexfirst{
-  z-index: 9000000 !important;
+  z-index: 10 !important;
 }
 .card-custom{
   width:227px !important;
@@ -63,12 +120,13 @@
   display: flex;
   flex-direction: column; 
 }
-.fondofrutas{
+.fondofrutas {
   background-size: 150px;
-  background-image:url("../imagenes/home/fondo.png") !important;
+  background-image: url("../imagenes/home/fondo.png") !important;
   background-repeat: repeat;
 }
-.size-events{
+
+.size-events {
   width: 70% !important;
   height: 70% !important;
   margin-left: 15% !important;
@@ -94,6 +152,8 @@ height: 400px !important;
 .titulo{
   font-size: 23px !important;
 }
+
+/* Publicaciones */
 
 #file_multi_video{
   width: 0.1px;
@@ -154,3 +214,48 @@ label[for="file_multi_video"] {
     align-self: center;
     overflow-y: scroll;
   }
+
+  /* Diana */
+
+.fondo {
+  
+  background-image: linear-gradient( rgb(255, 255, 255), rgba(255, 255, 255, 0.712)), url(../imagenes/fondo4.jpg);
+  background-size: 100%;
+  z-index: 100;
+  background-attachment: fixed;
+}
+
+.fondo-footer {
+  background-image: linear-gradient( rgba(247, 222, 109, 0.486), rgba(255, 255, 255, 0.363)), url(../imagenes/footer.jpg);
+  background-size: 30%;
+  z-index: 100;
+  background-attachment: fixed;
+  border-radius: 50px 50px 50px 50px;
+  -moz-border-radius: 50px 50px 50px 50px;
+  -webkit-border-radius: 50px 50px 50px 50px;
+  border: 3px double #f2ae0e;
+}
+
+@font-face {
+  font-family: "Signika-Bold";
+  src: url("fonts/Signika-Bold.ttf");
+}
+
+.fuente {
+  font-family: "Signika-Bold";
+}
+
+.contenido {
+  position: absolute;
+  background: transparent;
+  z-index: 2;
+  width: 100%
+}
+
+.link {
+  color: rgb(255, 102, 0);
+}
+
+.link:hover {
+  color: rgb(1, 204, 52);
+}

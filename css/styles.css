@@ -161,14 +161,39 @@ body {
     max-width: 1000px !important;
 }
 
-.bio {
-    color: #616161 !important;
-    height: 400px !important;
-}
-
-.titulo {
-    font-size: 23px !important;
-}
+.bio{
+    background-color: #f7eac4;
+    color:  #110505 !important;
+    height: 100px !important;
+    width: 250px;
+    padding: 10px;
+    }
+    .website{
+    background-color: #f7eac4;
+    color:  #110505 !important;
+    height: 100px !important;
+    width: 250px;
+    padding: 10px;
+    }
+    .intereses{
+    background-color: #f7eac4;
+    color:  #110505 !important;
+    height: 100px !important;
+    width: 250px;
+    padding: 10px;
+    }
+    .estilo-textarea-perfil {
+       widows: 350px;;border: 2px solid #990000; height: 60px !important;
+     }
+    .remark-perfil{
+     background-color: #F2FDFF;
+     border-radius: 20px;
+     widows: 350px;
+     height: 80px;
+     text-align: left;
+     align-self: center;
+     overflow-y: scroll;
+    }
 
 
 /* Publicaciones */

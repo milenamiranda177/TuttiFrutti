@@ -31,7 +31,7 @@
                     <input type="text" style="background-color: rgba(234, 204, 236, 0.445)" class="orange-text darken-1" placeholder="Buscar...">
                 </div>
                 <div class="col s1" id="notification">
-                    <a href="chat.html" onclick="alert('Tienes 4 mensajes sin leer, ve a chat')">
+                    <a href="chat.html?#!" onclick="alert('Tienes 4 mensajes sin leer, ve a chat')">
                         <img src="imagenes/home/notification.jpg" alt="" class="img_alerta notification responsive-img">
                     </a>
                 </div>
@@ -57,7 +57,7 @@
                 <div class="padding-10 col s3 light-green lighten-1 center-align">
                     <div class="card-content light-green lighten-1 white-text">
 
-                        <a href="chat.html" class="white-text"> <i class="iconos_absolute material-icons">chat</i> <span>FRUTICHAT</span> </a>
+                        <a href="chat.html?#!" class="white-text"> <i class="iconos_absolute material-icons">chat</i> <span>FRUTICHAT</span> </a>
                     </div>
                 </div>
                 <div class="border-radius-5-right padding-10 col s3 light-green center-align">
@@ -107,192 +107,186 @@
             <!--muro-->
             <div class="mural">
                 <div class="col s6 col-content">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="noticia">
-                        <div class="card" id="cardThinking">
-                          <div class="card-content">
-                            <p id="feeling"></p>
-                            <textarea cols=10 rows=10 spaceholder="Di algo..." id="thinking"></textarea>
-                            <p>Qué estás pensando?</p>
-                            <i class="material-icons red-text" id="happy">insert_emoticon</i>
-                            <i class="material-icons red-text" id="bad">mood_bad</i>
-                            <i class="material-icons red-text" id="dissatisfied">sentiment_very_dissatisfied</i>
-                            <i class="material-icons red-text" id="neutral">sentiment_neutral</i>
-                            <br>
-                            <input type="file" id="file" name="file" accept="image/x-png,image/gif,image/jpeg" />
-                            <label for="file"><span>Imagen</span></label>
-                            <label for="file_multi_video"><span>Video</span></label>
-                            <img src="" id="imgThumb" style="width:140px; height: 110px; display:none">
-                            <input type="file" name="file[]" id="file_multi_video" accept="video/*">
-                            <br>
-                            <br>
-                            <span style="color: lightslategrey">Vista Previa</span>
-                            <video width="200" height="200" id="videosolito" controls style="display: none">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="noticia">
+                                <div class="card" id="cardThinking">
+                                    <div class="card-content">
+                                        <p id="feeling"></p>
+                                        <textarea cols=10 rows=10 spaceholder="Di algo..." id="thinking"></textarea>
+                                        <p>Qué estás pensando?</p>
+                                        <i class="material-icons red-text" id="happy">insert_emoticon</i>
+                                        <i class="material-icons red-text" id="bad">mood_bad</i>
+                                        <i class="material-icons red-text" id="dissatisfied">sentiment_very_dissatisfied</i>
+                                        <i class="material-icons red-text" id="neutral">sentiment_neutral</i>
+                                        <br>
+                                        <input type="file" id="file" name="file" accept="image/x-png,image/gif,image/jpeg" />
+                                        <label for="file"><span>Imagen</span></label>
+                                        <label for="file_multi_video"><span>Video</span></label>
+                                        <img src="" id="imgThumb" style="width:140px; height: 110px; display:none">
+                                        <input type="file" name="file[]" id="file_multi_video" accept="video/*">
+                                        <br>
+                                        <br>
+                                        <span style="color: lightslategrey">Vista Previa</span>
+                                        <video width="200" height="200" id="videosolito" controls style="display: none">
                               <source src="" id="video_here"> Your browser does not
                               support HTML5 video. </video>
-                            <output id="list"></output><br>
-                            <a class="float-right waves-effect waves-light btn" id="publicar">Publicar</a>
-                          </div>
-                          <br>
-                          <br>
-                        </div>
-                        <div id="publicaciones"></div>
-                        <div class="card" id="card1">
-                          <div class="background-opacity">
-                            <img src="imagenes/perfil/perfil.jpg" width=50px height=50px alt="" class="margin-10">
-                            <span class="span-wall">Piña Bennet está en Cancún</span>
-                          </div>
-                          <div class="card-content left-align">
-                            <p>Día en la Playaaa !!!!!!! Nuestra visita a las playas en Cancun.... </p>
-                          </div>
-                          <div class="card-image">
-                            <img src="imagenes/perfil/noticia1.jpg" width=100px height=100px alt=""
-                              class="img-wall responsive-img">
-                          </div>
-                          <div class="row" id="favorite1">
-                            <div class="col s1">
-                              <a class=" waves-effect waves-light red btn-floating " onclick="likePub(1)"><i
+                                        <output id="list"></output><br>
+                                        <a class="float-right waves-effect waves-light btn" id="publicar">Publicar</a>
+                                    </div>
+                                    <br>
+                                    <br>
+                                </div>
+                                <div id="publicaciones"></div>
+                                <div class="card" id="card1">
+                                    <div class="background-opacity">
+                                        <img src="imagenes/perfil/perfil.jpg" width=50px height=50px alt="" class="margin-10">
+                                        <span class="span-wall">Piña Bennet está en Cancún</span>
+                                    </div>
+                                    <div class="card-content left-align">
+                                        <p>Día en la Playaaa !!!!!!! Nuestra visita a las playas en Cancun.... </p>
+                                    </div>
+                                    <div class="card-image">
+                                        <img src="imagenes/perfil/noticia1.jpg" width=100px height=100px alt="" class="img-wall responsive-img">
+                                    </div>
+                                    <div class="row" id="favorite1">
+                                        <div class="col s1">
+                                            <a class=" waves-effect waves-light red btn-floating " onclick="likePub(1)"><i
                                   class="material-icons left ligth-text">favorite</i></a>
-                            </div>
-                            <div class="col s1">
-                              <p id="like1"></p>
-                            </div>
-                          </div>
-                          <div class="comment">
-                            <textarea id="textarea1" class="estilo-textarea-perfil"></textarea>
-                            <button class="waves-effect waves-light btn" id="comment1" value="Comentar"
-                              onClick="gotoNode(1)">Comentar</button>
-                          </div>
-                          <label for="" class='active'>Comentarios</label>
-                          <div class="remark-perfil" id="remark1"></div>
-                        </div>
-                        <div class="card" id="card2">
-                          <div class="background-opacity">
-                            <img src="imagenes/perfil/perfil.jpg" width=50px height=50px alt="" class="margin-10">
-                            <span class="span-wall">Piña Bennet está en Bogotá</span>
-                          </div>
-                          <div class="card-content left-align">
-                            <p>Marcha anual! <br> Fruuutaaas y Vegeeeetaaaaless.... </p>
-                          </div>
-                          <div class="card-image">
-                            <img src="imagenes/perfil/noticia2.jpg" width=100px height=100px alt=""
-                              class="img-wall responsive-img">
-                          </div>
-                          <div class="row" id="favorite1">
-                            <div class="col s1">
-                              <a class=" waves-effect waves-light red btn-floating " onclick="likePub(1)"><i
+                                        </div>
+                                        <div class="col s1">
+                                            <p id="like1"></p>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        <textarea id="textarea1" class="estilo-textarea-perfil"></textarea>
+                                        <button class="waves-effect waves-light btn" id="comment1" value="Comentar" onClick="gotoNode(1)">Comentar</button>
+                                    </div>
+                                    <label for="" class='active'>Comentarios</label>
+                                    <div class="remark-perfil" id="remark1"></div>
+                                </div>
+                                <div class="card" id="card2">
+                                    <div class="background-opacity">
+                                        <img src="imagenes/perfil/perfil.jpg" width=50px height=50px alt="" class="margin-10">
+                                        <span class="span-wall">Piña Bennet está en Bogotá</span>
+                                    </div>
+                                    <div class="card-content left-align">
+                                        <p>Marcha anual! <br> Fruuutaaas y Vegeeeetaaaaless.... </p>
+                                    </div>
+                                    <div class="card-image">
+                                        <img src="imagenes/perfil/noticia2.jpg" width=100px height=100px alt="" class="img-wall responsive-img">
+                                    </div>
+                                    <div class="row" id="favorite1">
+                                        <div class="col s1">
+                                            <a class=" waves-effect waves-light red btn-floating " onclick="likePub(1)"><i
                                   class="material-icons left ligth-text">favorite</i></a>
-                            </div>
-                            <div class="col s1">
-                              <p id="like1"></p>
-                            </div>
-                          </div>
-                          <div class="comment">
-                            <textarea id="textarea1" class="estilo-textarea-perfil"></textarea>
-                            <button class="waves-effect waves-light btn" id="comment1" value="Comentar"
-                              onClick="gotoNode(1)">Comentar</button>
-                          </div>
-                          <label for="" class='active'>Comentarios</label>
-                          <div class="remark-perfil" id="remark1"></div>
-                        </div>
-                        <div class="card" id="card3">
-                          <div class="background-opacity">
-                            <img src="imagenes/perfil/perfil.jpg" width=50px height=50px alt="" class="margin-10">
-                            <span class="span-wall">Piña Bennet está en Bogotá</span>
-                          </div>
-                          <div class="card-content left-align">
-                            <p>Piña Dulce!! </p>
-                          </div>
-                          <div class="card-image">
-                            <img src="imagenes/perfil/noticia3.jpg" width=100px height=100px alt=""
-                              class="img-wall responsive-img">
-                          </div>
-                          <div class="row" id="favorite1">
-                            <div class="col s1">
-                              <a class=" waves-effect waves-light red btn-floating " onclick="likePub(1)"><i
+                                        </div>
+                                        <div class="col s1">
+                                            <p id="like1"></p>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        <textarea id="textarea1" class="estilo-textarea-perfil"></textarea>
+                                        <button class="waves-effect waves-light btn" id="comment1" value="Comentar" onClick="gotoNode(1)">Comentar</button>
+                                    </div>
+                                    <label for="" class='active'>Comentarios</label>
+                                    <div class="remark-perfil" id="remark1"></div>
+                                </div>
+                                <div class="card" id="card3">
+                                    <div class="background-opacity">
+                                        <img src="imagenes/perfil/perfil.jpg" width=50px height=50px alt="" class="margin-10">
+                                        <span class="span-wall">Piña Bennet está en Bogotá</span>
+                                    </div>
+                                    <div class="card-content left-align">
+                                        <p>Piña Dulce!! </p>
+                                    </div>
+                                    <div class="card-image">
+                                        <img src="imagenes/perfil/noticia3.jpg" width=100px height=100px alt="" class="img-wall responsive-img">
+                                    </div>
+                                    <div class="row" id="favorite1">
+                                        <div class="col s1">
+                                            <a class=" waves-effect waves-light red btn-floating " onclick="likePub(1)"><i
                                   class="material-icons left ligth-text">favorite</i></a>
+                                        </div>
+                                        <div class="col s1">
+                                            <p id="like1"></p>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        <textarea id="textarea1" class="estilo-textarea-perfil"></textarea>
+                                        <button class="waves-effect waves-light btn" id="comment1" value="Comentar" onClick="gotoNode(1)">Comentar</button>
+                                    </div>
+                                    <label for="" class='active'>Comentarios</label>
+                                    <div class="remark-perfil" id="remark1"></div>
+                                </div>
                             </div>
-                            <div class="col s1">
-                              <p id="like1"></p>
-                            </div>
-                          </div>
-                          <div class="comment">
-                            <textarea id="textarea1" class="estilo-textarea-perfil"></textarea>
-                            <button class="waves-effect waves-light btn" id="comment1" value="Comentar"
-                              onClick="gotoNode(1)">Comentar</button>
-                          </div>
-                          <label for="" class='active'>Comentarios</label>
-                          <div class="remark-perfil" id="remark1"></div>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-                <!--fin muro-->
+            </div>
+            <!--fin muro-->
 
-                <!--sugerencias-->
-                
-                <!--fin fotos-->
+            <!--sugerencias-->
+
+            <!--fin fotos-->
 
 
+        </div>
+
+
+        <!--Aqui termina el contenido de la pagina -->
+    </div>
+
+    <!-- FOOTER -->
+
+
+    <div class="row">
+        <footer class="page-footer fondo-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l4 s12 ">
+                        <h4 class="orange-text text-darken-4 center ">Tutti Frutti</h4>
+                        <p class="orange-text text-darken-4 center">La mejor red social para todas las frutas del mercado.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12  center">
+                        <ul>
+                            <li class="padding-3"><a class="link" href="home.html">>>>FRUTERO<<<</a></li>
+                            <li class="padding-3"><a class="link" href="perfil.html">>>>PERFIL<<<</a></li>
+                            <li class="padding-3"><a class="link" href="chat.html?#!">>>>FRUTICHAT<<<</a></li>
+                            <li class="padding-3"><a class="link" href="index.html">>>>SALIR<<<</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
+            <hr class="separador">
 
-            <!--Aqui termina el contenido de la pagina -->
-        </div>
-
-        <!-- FOOTER -->
-
-
-        <div class="row">
-            <footer class="page-footer fondo-footer">
+            <div class="estilo-fondo-links">
+                <div class="sociales">
+                    <a class="icon-crown-plus link2" href="" title="Us">Sobre Nosotros</a>
+                    <a class="icon-lamp link2" href="" title="language">Idioma</a>
+                    <a class="icon-pin  link2" href="" title="terms">Terminos y Condiciones</a>
+                    <a class="icon-lock link2" href="" title="privacy">Privacidad </a>
+                    <a class="icon-star link2" href="" title="help">Ayuda</a>
+                </div>
+            </div>
+            <hr class="separador">
+            <div class="estilo-fondo-copyright">
                 <div class="container">
-                    <div class="row">
-                        <div class="col l4 s12 ">
-                            <h4 class="orange-text text-darken-4 center ">Tutti Frutti</h4>
-                            <p class="orange-text text-darken-4 center">La mejor red social para todas las frutas del mercado.</p>
-                        </div>
-                        <div class="col l4 offset-l2 s12  center">
-                            <ul>
-                                <li class="padding-3"><a class="link" href="home.html">>>>FRUTERO<<<</a></li>
-                                <li class="padding-3"><a class="link" href="perfil.html">>>>PERFIL<<<</a></li>
-                                <li class="padding-3"><a class="link" href="chat.html">>>>FRUTICHAT<<<</a></li>
-                                <li class="padding-3"><a class="link" href="index.html">>>>SALIR<<<</a></li>
-                            </ul>
-                        </div>
-                    </div>
+
+                    <label class="left link2" href="">© 2019 Copyright</label>
+                    <label class="right link2" href="">BIT Noche Grupo B</label>
                 </div>
+            </div>
+        </footer>
 
-                <hr class="separador">
+    </div>
+    <!-- FIN FOOTER -->
 
-                <div class="estilo-fondo-links">
-                    <div class="sociales">
-                        <a class="icon-crown-plus link2" href="" title="Us">Sobre Nosotros</a>
-                        <a class="icon-lamp link2" href="" title="language">Idioma</a>
-                        <a class="icon-pin  link2" href="" title="terms">Terminos y Condiciones</a>
-                        <a class="icon-lock link2" href="" title="privacy">Privacidad </a>
-                        <a class="icon-star link2" href="" title="help">Ayuda</a>
-                    </div>
-                </div>
-                <hr class="separador">
-                <div class="estilo-fondo-copyright">
-                    <div class="container">
-
-                        <label class="left link2" href="">© 2019 Copyright</label>
-                        <label class="right link2" href="">BIT Noche Grupo B</label>
-                    </div>
-                </div>
-            </footer>
-
-        </div>
-        <!-- FIN FOOTER -->
-
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script type="text/javascript" src="js/header.js"></script>
-        <script src="js/publication/scriptPerfil.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script src="js/publication/scriptPerfil.js"></script>
 </body>
 
 </html>

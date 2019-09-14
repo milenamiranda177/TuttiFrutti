@@ -35,7 +35,7 @@
                     <input type="text" style="background-color: rgba(234, 204, 236, 0.445)" class="orange-text darken-1" placeholder="Buscar...">
                 </div>
                 <div class="col s1" id="notification">
-                    <a href="chat.html" onclick="alert('Tienes 4 mensajes sin leer, ve a chat')">
+                    <a href="chat.html?#!" onclick="alert('Tienes 4 mensajes sin leer, ve a chat')">
                         <img src="imagenes/home/notification.jpg" alt="" class="img_alerta notification responsive-img">
                     </a>
                 </div>
@@ -61,7 +61,7 @@
                 <div class="padding-10 col s3 light-green lighten-1 center-align">
                     <div class="card-content light-green lighten-1 white-text">
 
-                        <a href="chat.html" class="white-text"> <i class="iconos_absolute material-icons">chat</i> <span>FRUTICHAT</span> </a>
+                        <a href="chat.html?#!" class="white-text"> <i class="iconos_absolute material-icons">chat</i> <span>FRUTICHAT</span> </a>
                     </div>
                 </div>
                 <div class="border-radius-5-right padding-10 col s3 light-green center-align">
@@ -80,243 +80,193 @@
                 <h5>Stories</h5>
                 <div class="row center-align">
 
-                        <div class="card card-custom">
+                    <div class="card card-custom">
 
-                                <div class="card-content">
-                                        <div class="row center-align">
-                                                <span class="card-title">Tu última historia</span>
-                                                <p id="defaultStoryMsg">Aún no subes historias. Anímate!
-                                                </p>
-                                                <img id="imgSubida" src="#" alt="your image"
-                                                        style="object-fit: contain;" class="none"
-                                                        onerror="this.style.display='none'" width="200"
-                                                        height="200" />
+                        <div class="card-content">
+                            <div class="row center-align">
+                                <span class="card-title">Tu última historia</span>
+                                <p id="defaultStoryMsg">Aún no subes historias. Anímate!
+                                </p>
+                                <img id="imgSubida" src="#" alt="your image" style="object-fit: contain;" class="none" onerror="this.style.display='none'" width="200" height="200" />
 
-                                                <video autoplay id="videoSubido" src="#" width="200"
-                                                        height="200" style="object-fit: cover;"></video>
+                                <video autoplay id="videoSubido" src="#" width="200" height="200" style="object-fit: cover;"></video>
 
-                                                <p id="textoSubido" class="none"
-                                                        style="width: 200px; height: 200px; word-break: normal; white-space: normal">
+                                <p id="textoSubido" class="none" style="width: 200px; height: 200px; word-break: normal; white-space: normal">
 
-                                                </p>
-                                        </div>
-                                        <div class="row">
-                                                <a class="btn-floating halfway-fab waves-effect waves-light red btn modal-trigger"
-                                                        href="#modalNewStory"><i
+                                </p>
+                            </div>
+                            <div class="row">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red btn modal-trigger" href="#modalNewStory"><i
                                                                 class="material-icons">add</i></a>
 
-                                        </div>
-                                </div>
-
+                            </div>
                         </div>
 
-                        <div id="modalMyStories" class="modal">
-                                <div class="modal-content">
-                                        <h4>Tus historias</h4>
-                                        <div id="misHistorias" class="carousel" data-indicators="true">
-                                        </div>
-                                </div>
+                    </div>
+
+                    <div id="modalMyStories" class="modal">
+                        <div class="modal-content">
+                            <h4>Tus historias</h4>
+                            <div id="misHistorias" class="carousel" data-indicators="true">
+                            </div>
                         </div>
+                    </div>
 
 
 
                 </div>
                 <!-- Carrusel de Stories-->
                 <div class="row">
-                        <div id="storiescont" class="card card-custom">
-                                <div id="bubbles" class="card">
-                                        <ul class="collection">
-                                                <li class="collection-item avatar lime lighten-1">
-                                                        <img src="imagenes/perfil/perfil.jpg"
-                                                                alt="smile" class="circle z-depth-1">
-                                                        <span class="foto">Mis
+                    <div id="storiescont" class="card card-custom">
+                        <div id="bubbles" class="card">
+                            <ul class="collection">
+                                <li class="collection-item avatar lime lighten-1">
+                                    <img src="imagenes/perfil/perfil.jpg" alt="smile" class="circle z-depth-1">
+                                    <span class="foto">Mis
                                                                 historias</span>
-                                                        <a href="#modalMyStories"
-                                                                class="secondary-content  modal-trigger">
-                                                                <i
-                                                                        class="small material-icons">play_arrow</i></a>
-                                                </li>
-                                                <li class="collection-item avatar">
-                                                        <img src="imagenes/storiesimg/smile.jpg"
-                                                                alt="smile" class="circle z-depth-1">
-                                                        <span class="foto">Limonito</span>
-                                                        <p>@monito08 <br>
-                                                                hace 14 min
-                                                        </p>
-                                                        <a href="#modal4"
-                                                                class="secondary-content  modal-trigger">
-                                                                <i
-                                                                        class="small material-icons">looks_two</i></a>
-                                                </li>
-                                                <li class="collection-item avatar">
-                                                        <img src="imagenes/storiesimg/pear.jpg"
-                                                                alt="smile" class="circle z-depth-1">
-                                                        <span class="foto">Perita</span>
-                                                        <p>@perita23 <br>
-                                                                Hoy 19:23
-                                                        </p>
-                                                        <a href="#modal3"
-                                                                class="secondary-content  modal-trigger">
-                                                                <i
-                                                                        class="small material-icons">looks_4</i></a>
-                                                </li>
-                                                <li class="collection-item avatar">
-                                                        <img src="imagenes/storiesimg/banana.jpg"
-                                                                alt="smile" class="circle z-depth-1">
-                                                        <span class="foto">banana</span>
-                                                        <p>@nana_95 <br>
-                                                                Hoy 18:06
-                                                        </p>
-                                                        <a href="#modal2"
-                                                                class="secondary-content  modal-trigger">
-                                                                <i
-                                                                        class="small material-icons">looks_one</i></a>
+                                    <a href="#modalMyStories" class="secondary-content  modal-trigger">
+                                        <i class="small material-icons">play_arrow</i></a>
+                                </li>
+                                <li class="collection-item avatar">
+                                    <img src="imagenes/storiesimg/smile.jpg" alt="smile" class="circle z-depth-1">
+                                    <span class="foto">Limonito</span>
+                                    <p>@monito08 <br> hace 14 min
+                                    </p>
+                                    <a href="#modal4" class="secondary-content  modal-trigger">
+                                        <i class="small material-icons">looks_two</i></a>
+                                </li>
+                                <li class="collection-item avatar">
+                                    <img src="imagenes/storiesimg/pear.jpg" alt="smile" class="circle z-depth-1">
+                                    <span class="foto">Perita</span>
+                                    <p>@perita23 <br> Hoy 19:23
+                                    </p>
+                                    <a href="#modal3" class="secondary-content  modal-trigger">
+                                        <i class="small material-icons">looks_4</i></a>
+                                </li>
+                                <li class="collection-item avatar">
+                                    <img src="imagenes/storiesimg/banana.jpg" alt="smile" class="circle z-depth-1">
+                                    <span class="foto">banana</span>
+                                    <p>@nana_95 <br> Hoy 18:06
+                                    </p>
+                                    <a href="#modal2" class="secondary-content  modal-trigger">
+                                        <i class="small material-icons">looks_one</i></a>
 
-                                                </li>
-                                                <li class="collection-item avatar">
-                                                        <img src="imagenes/storiesimg/tangerine.jpg"
-                                                                alt="smile" class="circle z-depth-1">
-                                                        <span class="foto">tangerine</span>
-                                                        <p>@tangy<br>
-                                                                Ayer 22:08
-                                                        </p>
-                                                        <a href="#modal1"
-                                                                class="secondary-content modal-trigger">
-                                                                <i
-                                                                        class="small material-icons">looks_3</i></a>
-                                                </li>
+                                </li>
+                                <li class="collection-item avatar">
+                                    <img src="imagenes/storiesimg/tangerine.jpg" alt="smile" class="circle z-depth-1">
+                                    <span class="foto">tangerine</span>
+                                    <p>@tangy<br> Ayer 22:08
+                                    </p>
+                                    <a href="#modal1" class="secondary-content modal-trigger">
+                                        <i class="small material-icons">looks_3</i></a>
+                                </li>
 
-                                        </ul>
-                                </div>
-                                <div id="modal1" class="modal">
-                                        <div class="modal-content">
-                                                <div class="carousel">
-                                                        <h4>Tangy life</h4>
-                                                        <a class="carousel-item" href="#one!"><img
-                                                                        src="imagenes/storiesimg/sadtangerine.jpg"
-                                                                        style="border-radius: 10px;"></a>
-                                                        <a class="carousel-item" href="#two!"><img
-                                                                        src="imagenes/storiesimg/splashtange.jpg"
-                                                                        style="border-radius: 10px;"></a>
-                                                        <a class="carousel-item" href="#two!"><img
-                                                                        src="imagenes/storiesimg/fruitcollection.jpg"
-                                                                        style="border-radius: 10px;"></a>
-                                                </div>
-                                        </div>
-                                </div>
-
-                                <div id="modal2" class="modal">
-                                        <div class="modal-content">
-                                                <h4>Hey Banana!</h4>
-                                                <img src="imagenes/storiesimg/banana.jpg" alt=""
-                                                        style="border-radius: 10px; height:300px; width:300px;">
-
-                                        </div>
-                                </div>
-
-                                <div id="modal3" class="modal">
-                                        <div class="modal-content">
-                                                <div class="carousel">
-                                                        <h4> Sweet</h4>
-                                                        <a class="carousel-item" href="#one!"><img
-                                                                        src="imagenes/storiesimg/dancingpear.jpg"
-                                                                        style="border-radius: 10px;"></a>
-                                                        <a class="carousel-item" href="#two!"><img
-                                                                        src="imagenes/storiesimg/peer.jpg"
-                                                                        style="border-radius: 10px;"></a>
-                                                        <a class="carousel-item active"
-                                                                href="#two!"><img
-                                                                        src="imagenes/storiesimg/pinkpe.jpg"
-                                                                        style="border-radius: 10px;"></a>
-                                                        <a class="carousel-item" href="#two!"><img
-                                                                        src="imagenes/storiesimg/togethpe.jpg"
-                                                                        style="border-radius: 10px;"></a>
-                                                </div>
-                                        </div>
-                                </div>
-                                <div id="modal4" class="modal">
-                                        <div class="modal-content">
-                                                <div class="carousel">
-                                                        <h4> Acid but sweet</h4>
-                                                        <a class="carousel-item" href="#one!"><img
-                                                                        src="imagenes/storiesimg/acidbut.jpg"
-                                                                        style="border-radius: 10px;"></a>
-                                                        <a class="carousel-item" href="#two!"><img
-                                                                        src="imagenes/storiesimg/fun.jpg"
-                                                                        style="border-radius: 10px;"></a>
-                                                </div>
-                                        </div>
-                                </div>
-
-
+                            </ul>
                         </div>
+                        <div id="modal1" class="modal">
+                            <div class="modal-content">
+                                <div class="carousel">
+                                    <h4>Tangy life</h4>
+                                    <a class="carousel-item" href="#one!"><img src="imagenes/storiesimg/sadtangerine.jpg" style="border-radius: 10px;"></a>
+                                    <a class="carousel-item" href="#two!"><img src="imagenes/storiesimg/splashtange.jpg" style="border-radius: 10px;"></a>
+                                    <a class="carousel-item" href="#two!"><img src="imagenes/storiesimg/fruitcollection.jpg" style="border-radius: 10px;"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="modal2" class="modal">
+                            <div class="modal-content">
+                                <h4>Hey Banana!</h4>
+                                <img src="imagenes/storiesimg/banana.jpg" alt="" style="border-radius: 10px; height:300px; width:300px;">
+
+                            </div>
+                        </div>
+
+                        <div id="modal3" class="modal">
+                            <div class="modal-content">
+                                <div class="carousel">
+                                    <h4> Sweet</h4>
+                                    <a class="carousel-item" href="#one!"><img src="imagenes/storiesimg/dancingpear.jpg" style="border-radius: 10px;"></a>
+                                    <a class="carousel-item" href="#two!"><img src="imagenes/storiesimg/peer.jpg" style="border-radius: 10px;"></a>
+                                    <a class="carousel-item active" href="#two!"><img src="imagenes/storiesimg/pinkpe.jpg" style="border-radius: 10px;"></a>
+                                    <a class="carousel-item" href="#two!"><img src="imagenes/storiesimg/togethpe.jpg" style="border-radius: 10px;"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="modal4" class="modal">
+                            <div class="modal-content">
+                                <div class="carousel">
+                                    <h4> Acid but sweet</h4>
+                                    <a class="carousel-item" href="#one!"><img src="imagenes/storiesimg/acidbut.jpg" style="border-radius: 10px;"></a>
+                                    <a class="carousel-item" href="#two!"><img src="imagenes/storiesimg/fun.jpg" style="border-radius: 10px;"></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
 
                 </div>
                 <br>
                 <br>
                 <!-- Carrusel de Stories-->
                 <div class="row">
-                        <div class="card card-custom">
-                                <div class="overlap"></div>
-                                <div class="card-image">
-                                        <img src="imagenes/home/history3.gif" width=200px height=200px
-                                                alt="" class="responsive-img">
-                                        <a
-                                                class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i
+                    <div class="card card-custom">
+                        <div class="overlap"></div>
+                        <div class="card-image">
+                            <img src="imagenes/home/history3.gif" width=200px height=200px alt="" class="responsive-img">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i
                                                         class="material-icons">add</i></a>
-                                </div>
-                                <div class="card-content">
-                                        <span class="black-text truncate">Modelando ando</span>
-                                </div>
                         </div>
+                        <div class="card-content">
+                            <span class="black-text truncate">Modelando ando</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="row center-align">
-                        <div class="card card-custom">
-                                <div class="overlap"></div>
-                                <div class="card-image">
-                                        <img src="imagenes/home/cherrygif.gif" class="">
-                                        <a
-                                                class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i
+                    <div class="card card-custom">
+                        <div class="overlap"></div>
+                        <div class="card-image">
+                            <img src="imagenes/home/cherrygif.gif" class="">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i
                                                         class="material-icons">add</i></a>
-                                </div>
-                                <div class="card-content">
-                                        <span class="black-text truncate">Hermanos de sangre, en las
+                        </div>
+                        <div class="card-content">
+                            <span class="black-text truncate">Hermanos de sangre, en las
                                                 buenas y malas</span>
-                                </div>
-
                         </div>
+
+                    </div>
                 </div>
                 <div class="row center-align">
-                        <div class="card card-custom">
-                                <div class="overlap"></div>
-                                <div class="card-image">
-                                        <img src="imagenes/home/aguacatesaltando.gif" class="">
-                                        <a
-                                                class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i
+                    <div class="card card-custom">
+                        <div class="overlap"></div>
+                        <div class="card-image">
+                            <img src="imagenes/home/aguacatesaltando.gif" class="">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i
                                                         class="material-icons">add</i></a>
-                                </div>
-                                <div class="card-content">
-                                        <span class="black-text">Las frutas tambien engordamos</span>
-                                </div>
-
                         </div>
+                        <div class="card-content">
+                            <span class="black-text">Las frutas tambien engordamos</span>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="row center-align">
-                        <div class="card card-custom">
-                                <div class="overlap"></div>
-                                <div class="card-image">
-                                        <img src="imagenes/home/virus.gif" class="">
-                                        <a
-                                                class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i
+                    <div class="card card-custom">
+                        <div class="overlap"></div>
+                        <div class="card-image">
+                            <img src="imagenes/home/virus.gif" class="">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red zindexfirst"><i
                                                         class="material-icons">add</i></a>
-                                </div>
-                                <div class="card-content">
-                                        <span class="black-text">Cuidado nuevo virus en la ciudad</span>
-                                </div>
-
                         </div>
+                        <div class="card-content">
+                            <span class="black-text">Cuidado nuevo virus en la ciudad</span>
+                        </div>
+
+                    </div>
                 </div>
-        </div>
+            </div>
             <div class="col s6 col-content " id="wall">
 
                 <div class="card" id="cardThinking">
@@ -597,7 +547,7 @@
                         <ul>
                             <li class="padding-3"><a class="link" href="home.html">>>>FRUTERO<<<</a></li>
                             <li class="padding-3"><a class="link" href="perfil.html">>>>PERFIL<<<</a></li>
-                            <li class="padding-3"><a class="link" href="chat.html">>>>FRUTICHAT<<<</a></li>
+                            <li class="padding-3"><a class="link" href="chat.html?#!">>>>FRUTICHAT<<<</a></li>
                             <li class="padding-3"><a class="link" href="index.html">>>>SALIR<<<</a></li>
                         </ul>
                     </div>
@@ -629,49 +579,44 @@
     <!-- *************** INICIO FUNCIONALIDAD CARGAR STORIES ************ -->
     <div id="modalNewStory" class="modal modal-fixed-footer">
         <div class="modal-content center-align">
-                <h4>Nueva historia</h4>
-                <div class="row">
-                        <label
-                                class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+            <h4>Nueva historia</h4>
+            <div class="row">
+                <label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
                                 <i class="material-icons md-48 md-dark">add_a_photo</i>
                                 <input id="inputImagen" type="file" class="none" required
                                         accept=".jpg,.jpeg,.gif,.png" />
                         </label>
-                        <label
-                                class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+                <label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
                                 <i class="material-icons md-48 md-dark">videocam</i>
                                 <input id="inputVideo" type="file" class="none" required accept=".mp4,.3gp" />
                         </label>
-                        <label id="inputTexto"
-                                class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+                <label id="inputTexto" class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
                                 <i class="material-icons md-48 md-dark">text_format</i>
                         </label>
+            </div>
+            <div class="row center-align">
+                <div class="video-container none" id="videoContainer">
+                    <video id="myVideo" src="#" width="320" height="240" controls></video>
                 </div>
-                <div class="row center-align">
-                        <div class="video-container none" id="videoContainer">
-                                <video id="myVideo" src="#" width="320" height="240" controls></video>
-                        </div>
 
-                        <img id="myImg" src="#" alt="your image" class="none" width=400
-                                onerror="this.style.display='none'" />
+                <img id="myImg" src="#" alt="your image" class="none" width=400 onerror="this.style.display='none'" />
 
-                        <div id="contTextHistoria" class="none">
-                                <p id="textoHistoria">
-                                        <textarea id="textoTemp"
-                                                placeholder="Escribe tu texto aquí..."></textarea>
-                                </p>
-                                <span id="cambiarColor">
+                <div id="contTextHistoria" class="none">
+                    <p id="textoHistoria">
+                        <textarea id="textoTemp" placeholder="Escribe tu texto aquí..."></textarea>
+                    </p>
+                    <span id="cambiarColor">
                                         <i class="material-icons md-48 md-dark">color_lens</i>
                                 </span>
-                        </div>
                 </div>
+            </div>
         </div>
         <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-                <a href="#!" id="subirHistoria" class="modal-close waves-effect waves-green btn">Subir
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+            <a href="#!" id="subirHistoria" class="modal-close waves-effect waves-green btn">Subir
                         historia</a>
         </div>
-</div>
+    </div>
     <!-- *************** FIN FUNCIONALIDAD CARGAR STORIES ************ -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>

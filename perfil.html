@@ -106,58 +106,130 @@
 
             <!--muro-->
             <div class="mural">
-                <div class="col s12 m4 l5">
-                    <div class="card">
-                        <div class="card-content">
-
-
-                            <div class="noticia">
-                                <div class="z-depth-5">
-                                    <div class="card-image">
-                                        <img src="imagenes/perfil/noticia1.jpg">
-                                        <span class="card-title black-text"><h5>Día en la playa!</h5>
-    </div>
-          <div class="card-content">
-          <p>Nuestra visita a las playas en Cancun..</p>
-          </div>
-          <a class="waves-effect waves-light btn-small blue-grey lighten-4" id="diaPlaya"><i class="material-icons left" >star</i>Me gusta!</a>
-          <i class="material-icons right">visibility</i><p class="right">550</p>
-    </div><br>
-</div>
-
- 
-
-    <div class="z-depth-5">
-    <div class="card-image">                   
-    <img src="imagenes/perfil/noticia2.jpg">
-    <span class="card-title black-text"><h5>Evento</h5></span>
-                                    </div>
-                                    <div class="card-content">
-                                        <p>Marcha anual! <br> Fruuutaaas y Vegeeeetaaaaless....</p>
-                                    </div>
-                                    <a class="waves-effect waves-light btn-small blue-grey lighten-4" id="evento"><i class="material-icons left" >star</i>Me gusta!</a>
-                                    <i class="material-icons right">visibility</i>
-                                    <p class="right">1250</p>
-                                </div><br>
-
-
-
-
-                                <div class="z-depth-5">
-                                    <div class="card-image">
-                                        <img src="imagenes/perfil/noticia3.jpg">
-                                    </div>
-                                    <div class="card-content">
-                                        <p>Piña Dulce!! </p>
-                                    </div>
-                                    <a class="waves-effect waves-light btn-small blue-grey lighten-4" id="piñaDulce"><i class="material-icons left">star</i>Me gusta!</a>
-                                    <i class="material-icons right">visibility</i>
-                                    <p class="right">1250</p>
-                                </div>
-                            </div>
+                <div class="col s6 col-content">
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="noticia">
+                        <div class="card" id="cardThinking">
+                          <div class="card-content">
+                            <p id="feeling"></p>
+                            <textarea cols=10 rows=10 spaceholder="Di algo..." id="thinking"></textarea>
+                            <p>Qué estás pensando?</p>
+                            <i class="material-icons red-text" id="happy">insert_emoticon</i>
+                            <i class="material-icons red-text" id="bad">mood_bad</i>
+                            <i class="material-icons red-text" id="dissatisfied">sentiment_very_dissatisfied</i>
+                            <i class="material-icons red-text" id="neutral">sentiment_neutral</i>
+                            <br>
+                            <input type="file" id="file" name="file" accept="image/x-png,image/gif,image/jpeg" />
+                            <label for="file"><span>Imagen</span></label>
+                            <label for="file_multi_video"><span>Video</span></label>
+                            <img src="" id="imgThumb" style="width:140px; height: 110px; display:none">
+                            <input type="file" name="file[]" id="file_multi_video" accept="video/*">
+                            <br>
+                            <br>
+                            <span style="color: lightslategrey">Vista Previa</span>
+                            <video width="200" height="200" id="videosolito" controls style="display: none">
+                              <source src="" id="video_here"> Your browser does not
+                              support HTML5 video. </video>
+                            <output id="list"></output><br>
+                            <a class="float-right waves-effect waves-light btn" id="publicar">Publicar</a>
+                          </div>
+                          <br>
+                          <br>
                         </div>
+                        <div id="publicaciones"></div>
+                        <div class="card" id="card1">
+                          <div class="background-opacity">
+                            <img src="imagenes/perfil/perfil.jpg" width=50px height=50px alt="" class="margin-10">
+                            <span class="span-wall">Piña Bennet está en Cancún</span>
+                          </div>
+                          <div class="card-content left-align">
+                            <p>Día en la Playaaa !!!!!!! Nuestra visita a las playas en Cancun.... </p>
+                          </div>
+                          <div class="card-image">
+                            <img src="imagenes/perfil/noticia1.jpg" width=100px height=100px alt=""
+                              class="img-wall responsive-img">
+                          </div>
+                          <div class="row" id="favorite1">
+                            <div class="col s1">
+                              <a class=" waves-effect waves-light red btn-floating " onclick="likePub(1)"><i
+                                  class="material-icons left ligth-text">favorite</i></a>
+                            </div>
+                            <div class="col s1">
+                              <p id="like1"></p>
+                            </div>
+                          </div>
+                          <div class="comment">
+                            <textarea id="textarea1" class="estilo-textarea-perfil"></textarea>
+                            <button class="waves-effect waves-light btn" id="comment1" value="Comentar"
+                              onClick="gotoNode(1)">Comentar</button>
+                          </div>
+                          <label for="" class='active'>Comentarios</label>
+                          <div class="remark-perfil" id="remark1"></div>
+                        </div>
+                        <div class="card" id="card2">
+                          <div class="background-opacity">
+                            <img src="imagenes/perfil/perfil.jpg" width=50px height=50px alt="" class="margin-10">
+                            <span class="span-wall">Piña Bennet está en Bogotá</span>
+                          </div>
+                          <div class="card-content left-align">
+                            <p>Marcha anual! <br> Fruuutaaas y Vegeeeetaaaaless.... </p>
+                          </div>
+                          <div class="card-image">
+                            <img src="imagenes/perfil/noticia2.jpg" width=100px height=100px alt=""
+                              class="img-wall responsive-img">
+                          </div>
+                          <div class="row" id="favorite1">
+                            <div class="col s1">
+                              <a class=" waves-effect waves-light red btn-floating " onclick="likePub(1)"><i
+                                  class="material-icons left ligth-text">favorite</i></a>
+                            </div>
+                            <div class="col s1">
+                              <p id="like1"></p>
+                            </div>
+                          </div>
+                          <div class="comment">
+                            <textarea id="textarea1" class="estilo-textarea-perfil"></textarea>
+                            <button class="waves-effect waves-light btn" id="comment1" value="Comentar"
+                              onClick="gotoNode(1)">Comentar</button>
+                          </div>
+                          <label for="" class='active'>Comentarios</label>
+                          <div class="remark-perfil" id="remark1"></div>
+                        </div>
+                        <div class="card" id="card3">
+                          <div class="background-opacity">
+                            <img src="imagenes/perfil/perfil.jpg" width=50px height=50px alt="" class="margin-10">
+                            <span class="span-wall">Piña Bennet está en Bogotá</span>
+                          </div>
+                          <div class="card-content left-align">
+                            <p>Piña Dulce!! </p>
+                          </div>
+                          <div class="card-image">
+                            <img src="imagenes/perfil/noticia3.jpg" width=100px height=100px alt=""
+                              class="img-wall responsive-img">
+                          </div>
+                          <div class="row" id="favorite1">
+                            <div class="col s1">
+                              <a class=" waves-effect waves-light red btn-floating " onclick="likePub(1)"><i
+                                  class="material-icons left ligth-text">favorite</i></a>
+                            </div>
+                            <div class="col s1">
+                              <p id="like1"></p>
+                            </div>
+                          </div>
+                          <div class="comment">
+                            <textarea id="textarea1" class="estilo-textarea-perfil"></textarea>
+                            <button class="waves-effect waves-light btn" id="comment1" value="Comentar"
+                              onClick="gotoNode(1)">Comentar</button>
+                          </div>
+                          <label for="" class='active'>Comentarios</label>
+                          <div class="remark-perfil" id="remark1"></div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
                 <!--fin muro-->
 
                 <!--sugerencias-->
@@ -276,7 +348,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="js/header.js"></script>
-        <script type="text/javascript" src="js/perfil.js"></script>
+        <script src="js/publication/scriptPerfil.js"></script>
 </body>
 
 </html>

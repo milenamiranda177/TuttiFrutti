@@ -27,6 +27,7 @@ var contenedorTexto = document.getElementById("contTextHistoria");
 var btnCambiarColor = document.getElementById("cambiarColor");
 var textoTemp = document.getElementById("textoTemp");
 var textoSubido = document.getElementById("textoSubido");
+var defaultMsg = document.getElementById("defaultStoryMsg");
 
 /* Variables para validaciones*/
 var subioImagen = false;
@@ -38,18 +39,18 @@ var gradient = "linear-gradient(306deg, #76078b, #17cba6)";
 // Upload imagen
 $("#inputImagen").change(function () {
   if (this.files && this.files[0]) {
-      var reader = new FileReader();
-      reader.onload = imageIsLoaded;
-      reader.readAsDataURL(this.files[0]);
+    var reader = new FileReader();
+    reader.onload = imageIsLoaded;
+    reader.readAsDataURL(this.files[0]);
   }
 });
 
 // Upload video
 $("#inputVideo").change(function () {
   if (this.files && this.files[0]) {
-      var reader = new FileReader();
-      reader.onload = videoIsLoaded;
-      reader.readAsDataURL(this.files[0]);
+    var reader = new FileReader();
+    reader.onload = videoIsLoaded;
+    reader.readAsDataURL(this.files[0]);
   }
 });
 
@@ -96,71 +97,74 @@ function agregarTexto() {
 }
 
 function subirHistoria() {
-  if(!subioImagen && !subioVideo && !subioTexto){
+  if (!subioImagen && !subioVideo && !subioTexto) {
     alert(error);
+  } else {
+    defaultMsg.setAttribute("class", "none");
   }
+  
   if (subioImagen) {
-      var imgTemp = myImg.getAttribute("src");
-      if (imgTemp != "#") {
-          imagenSubida.setAttribute("src", myImg.getAttribute("src"));
-          videoSubido.setAttribute("src", "#");
-          videoSubido.setAttribute("class", "none");
-          textoSubido.innerHTML = "";
-          textoSubido.setAttribute("class", "none");
-          localStorage.setItem('uploadedStory', imagenSubida);
-          imagenSubida.setAttribute("style", "display: inline-block;");
-          myImg.setAttribute("src", "#");
-      } else {
-          alert(error);
-      }
+    var imgTemp = myImg.getAttribute("src");
+    if (imgTemp != "#") {
+      imagenSubida.setAttribute("src", myImg.getAttribute("src"));
+      videoSubido.setAttribute("src", "#");
+      videoSubido.setAttribute("class", "none");
+      textoSubido.innerHTML = "";
+      textoSubido.setAttribute("class", "none");
+      localStorage.setItem('uploadedStory', imagenSubida);
+      imagenSubida.setAttribute("style", "display: inline-block;");
+      myImg.setAttribute("src", "#");
+    } else {
+      alert(error);
+    }
   }
 
   if (subioVideo) {
-      console.log("subiovideo");
-      var videoTemp = myVideo.getAttribute("src");
-      if (imgTemp != "#") {
-          videoSubido.setAttribute("src", myVideo.getAttribute("src") + "#t=15,20");
-          imagenSubida.setAttribute("src", "#");
-          textoSubido.innerHTML = "";
-          localStorage.setItem('uploadedStory', videoSubido);
-          videoSubido.setAttribute("class", "show");
-          myVideo.setAttribute("src", "#");
-          myVideo.setAttribute("style", "display: inline-block");
-          textoSubido.setAttribute("class", "none");
-      } else {
-          alert(error);
-      }
+    console.log("subiovideo");
+    var videoTemp = myVideo.getAttribute("src");
+    if (imgTemp != "#") {
+      videoSubido.setAttribute("src", myVideo.getAttribute("src") + "#t=15,20");
+      imagenSubida.setAttribute("src", "#");
+      textoSubido.innerHTML = "";
+      localStorage.setItem('uploadedStory', videoSubido);
+      videoSubido.setAttribute("class", "show");
+      myVideo.setAttribute("src", "#");
+      myVideo.setAttribute("style", "display: inline-block");
+      textoSubido.setAttribute("class", "none");
+    } else {
+      alert(error);
+    }
   }
 
   if (subioTexto) {
-      textoSubido.innerHTML = textoTemp.value;
-      textoSubido.style.background = gradient;
-      textoSubido.setAttribute("class", "show");
-      imagenSubida.setAttribute("src", "#");
-      videoSubido.setAttribute("src", "#");
-      imagenSubida.setAttribute("class", "none");
-      videoSubido.setAttribute("class", "none");
-      textoTemp.innerHTML = "";
+    textoSubido.innerHTML = textoTemp.value;
+    textoSubido.style.background = gradient;
+    textoSubido.setAttribute("class", "show");
+    imagenSubida.setAttribute("src", "#");
+    videoSubido.setAttribute("src", "#");
+    imagenSubida.setAttribute("class", "none");
+    videoSubido.setAttribute("class", "none");
+    textoTemp.innerHTML = "";
   }
 
   console.log("antes append");
   var a = document.createElement('a');
 
   if (subioImagen) {
-      var linkContent = document.createElement("img");
-      linkContent.src = imagenSubida.src;
+    var linkContent = document.createElement("img");
+    linkContent.src = imagenSubida.src;
   }
 
-  if(subioVideo) {
-      var linkContent = document.createElement("video");
-      linkContent.src = videoSubido.src;
-      linkContent.setAttribute("controls", "controls");
+  if (subioVideo) {
+    var linkContent = document.createElement("video");
+    linkContent.src = videoSubido.src;
+    linkContent.setAttribute("controls", "controls");
   }
 
-  if(subioTexto) {
-      var linkContent = document.createElement("div");
-      linkContent.innerHTML = textoSubido.innerHTML;
-      linkContent.setAttribute("style", textoSubido.style.cssText);
+  if (subioTexto) {
+    var linkContent = document.createElement("div");
+    linkContent.innerHTML = textoSubido.innerHTML;
+    linkContent.setAttribute("style", textoSubido.style.cssText);
   }
 
   linkContent.style.border = "3px solid #999999";
@@ -168,10 +172,10 @@ function subirHistoria() {
   a.href = "#five!";
   a.setAttribute("class", "carousel-item");
   misHistorias.appendChild(a);
-  
+
   //remove the 'initialized' class which prevents slider from initializing itself again when it's not needed
   if (slider.hasClass('initialized')) {
-      slider.removeClass('initialized')
+    slider.removeClass('initialized')
   }
   //just reinit the carousel
   slider.carousel();
@@ -195,12 +199,12 @@ function generate() {
   var hexValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e"];
 
   function populate(a) {
-      for (var i = 0; i < 6; i++) {
-          var x = Math.round(Math.random() * 14);
-          var y = hexValues[x];
-          a += y;
-      }
-      return a;
+    for (var i = 0; i < 6; i++) {
+      var x = Math.round(Math.random() * 14);
+      var y = hexValues[x];
+      a += y;
+    }
+    return a;
   }
 
   var newColor1 = populate('#');

@@ -1,15 +1,17 @@
-var lblEnviar = document.getElementById("textarea1");
-var icoEnviar = document.getElementById("iconoEnviar");
+know = {
+    "hola" : "holi",
+    "como estas?" : "bien, bien y tu?",
+    "bien" : ":)"
+};
 
-function msmSend (){
-    if (lblEnviar.value == "" || lblEnviar.value == null) {
-        alert("No hay mensajes por enviar ");
-        
+function talk() {
+    console.log("entro");
+    var user = document.getElementById("userBox").value;
+    document.getElementById("userBox").value = "";
+    document.getElementById("chatLog").innerHTML += "<div class='card-panel grey lighten-5'>"+user+"</div>";
+    if (user in know) {
+        document.getElementById("chatLog").innerHTML += "<div class='card-panel green lighten-3'> "+ know[user]+"</div>";
     } else {
-        alert("Mensaje enviado");
+        document.getElementById("chatLog").innerHTML += "<div class='card-panel green lighten-3'> no te entiendo...</div>";
     }
-}
-
-icoEnviar.onclick = function(){
-    msmSend();
-}
+} 

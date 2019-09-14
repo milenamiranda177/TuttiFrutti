@@ -1,0 +1,96 @@
+/* Home */
+
+.notification{
+  margin-top: 20px !important;
+  margin-left: 20px !important;
+}
+.padding-10{
+  padding: 10px !important;
+}
+.border-radius-5-left{
+  border-radius: 5px 0px 0px 5px !important;
+}
+.border-radius-5-right{
+  border-radius: 0px 5px 5px 0px !important;
+}
+
+.iconos_absolute{
+  position:absolute !important;
+  margin-left: -30px !important;
+}
+.overlap{
+  position: absolute !important;
+  width:227px !important;
+  height:297px !important;
+  background:rgba(133, 121, 121, 0.2);
+  z-index: 9000;
+}
+.overlap-header{
+  position: absolute !important;
+  width:100% !important;
+  height:100px !important;
+  background-image: url("../imagenes/home/fondopatron.jpg");
+  background:rgba(234, 246, 99, 0.26);
+  z-index: -2;
+}
+.zindexfirst{
+  z-index: 9000000 !important;
+}
+.card-custom{
+  width:227px !important;
+  height:297px !important;
+}
+.content-custom-width{
+  width: 90% !important;
+}
+.float-right{
+  float: right !important;
+}
+.margin-10{
+  margin:10px !important;
+}
+.span-wall{
+  font-size: 16px !important; font-weight:bold !important;
+}
+.img-wall{
+  padding:0px 50px 20px 50px !important;
+}
+.background-opacity{
+  background:rgba(75, 185, 133, 0.3);
+  z-index: 90000 !important;
+}
+.cards_event{
+  display: flex;
+  flex-direction: column; 
+}
+.fondofrutas{
+  background-size: 150px;
+  background-image:url("../imagenes/home/fondo.png") !important;
+  background-repeat: repeat;
+}
+.size-events{
+  width: 70% !important;
+  height: 70% !important;
+  margin-left: 15% !important;
+}
+
+
+/* Perfil */
+body{
+  background: white;
+  padding: 1px !important;    
+}
+
+.container{
+  padding:5px !important;
+  max-width: 1000px !important;
+  
+}
+.bio{
+color:  #616161 !important; 
+height: 400px !important;  
+}
+
+.titulo{
+  font-size: 23px !important;
+}

@@ -1,0 +1,105 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.containers {
+    display: flex;
+    justify-content: center;
+}
+
+.frutas {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+}
+
+.frutas li {
+    flex: auto;
+}
+
+.frutas a {
+    display: block;
+}
+
+.frutas img {
+    width: 40px;
+    height: 30vmin;
+    object-fit: cover;
+    object-position: top;
+}
+
+.slides {
+    overflow: hidden;
+    width: 75vmin;
+    height: 100vmin;
+}
+
+.slides li {
+    width: 75vmin;
+    height: 100vmin;
+    position: absolute;
+    z-index: 1;
+}
+
+.slides img {
+    height: 100vmin;
+    object-fit: cover;
+    object-position: top;
+}
+
+.slides li:target {
+    z-index: 3;
+    -webkit-animation: slide 1s 1;
+}
+
+.slides li:not(:target) {
+    -webkit-animation: hidden 1s 1;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes hidden {
+    0% {
+        z-index: 2;
+    }
+    100% {
+        z-index: 2;
+    }
+}
+
+.con {
+    border-style: solid;
+    width: 200%;
+}
+
+.imagenes {
+    padding: 20px;
+    margin-right: 30px;
+}
+
+.imagenes1 {
+    padding: 80px;
+    margin: 0px 0px 0px 30px;
+}
+
+.imagenes3 {
+    padding: 20px;
+    border: solid 1px red;
+    margin: 0px 0px 0px 30px;
+}
